@@ -1,0 +1,500 @@
+﻿@model IEnumerable<dynamic>
+@using System.Linq
+@{
+    ViewData["Title"] = "Мои заказы";
+}
+
+<div class="container orders-container">
+    <div class="orders-header">
+        <h1>📦 Мои заказы</h1>
+        <p class="orders-subtitle">Управляйте своими заказами</p>
+    </div>
+
+    <div id="ordersContainer">
+        @if (Model != null && Model.Any())
+        {
+            <div class="orders-list">
+                @foreach (var item in Model)
+                {
+                    <div class="order-card" data-order-id="@item.Order.Id">
+                        <div class="order-card-content">
+                            <div class="order-medicine-info">
+                                <div class="medicine-image">
+                                    @if (!string.IsNullOrEmpty(item.Medicine?.PathImg))
+                                    {
+                                        <img src="@item.Medicine.PathImg" alt="@item.Medicine?.Name" />
+                                    }
+                                    else
+                                    {
+                                        <div class="no-image">💊</div>
+                                    }
+                                </div>
+                                
+                                <div class="medicine-details">
+                                    <h3 class="medicine-name">@(item.Medicine?.Name ?? "Неизвестное лекарство")</h3>
+                                    <p class="medicine-manufacturer">
+                                        <strong>Производитель:</strong> 
+                                        <span>@(item.Medicine?.Manufacturer ?? "Не указано")</span>
+                                    </p>
+                                    <p class="medicine-category">
+                                        <strong>Категория:</strong> 
+                                        <span class="category-badge">@(item.Medicine?.Category?.ToString() ?? "Не указана")</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="order-info">
+                                <div class="order-price">
+                                    <span class="price-label">Сумма</span>
+                                    <span class="price-value">₽@item.Order.Price</span>
+                                </div>
+                                <div class="order-date">
+                                    <span class="date-label">Дата</span>
+                                    @{
+                                        string dateText = "";
+                                        var createdObj = item.Order.CreatedAt;
+                                        if (createdObj is DateTime dt)
+                                        {
+                                            dateText = dt.ToString("dd.MM.yyyy HH:mm");
+                                        }
+                                        else
+                                        {
+                                            DateTime parsed;
+                                            if (DateTime.TryParse(createdObj?.ToString(), out parsed))
+                                                dateText = parsed.ToString("dd.MM.yyyy HH:mm");
+                                            else
+                                                dateText = createdObj?.ToString() ?? "";
+                                        }
+                                    }
+                                    <span class="date-value">@dateText</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-delete delete-order-btn" type="button" data-order-id="@item.Order.Id" title="Удалить заказ">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 6h18"></path>
+                                    <path d="M8 6v12a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V6"></path>
+                                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                                </svg>
+                                Удалить
+                            </button>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="empty-state">
+                <div class="empty-icon">📋</div>
+                <h2>У вас пока нет заказов</h2>
+                <p>Перейдите в каталог лекарств, чтобы сделать первый заказ</p>
+                <a href="/Medicines/Catalog" class="btn btn-primary">Перейти в каталог</a>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    :root {
+        --primary-color: #0b5cff;
+        --danger-color: #dc3545;
+        --danger-hover: #c82333;
+        --text-primary: #1a1a1a;
+        --text-secondary: #666;
+        --text-light: #999;
+        --border-color: #e5e5e5;
+        --bg-light: #f9f9f9;
+        --bg-hover: #f5f5f5;
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+        --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.12);
+        --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.15);
+        --radius: 8px;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .orders-container {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .orders-header {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .orders-header h1 {
+        font-size: 36px;
+        font-weight: 800;
+        color: var(--text-primary);
+        margin: 0 0 12px 0;
+        letter-spacing: -0.5px;
+    }
+
+    .orders-subtitle {
+        font-size: 16px;
+        color: var(--text-secondary);
+        margin: 0;
+    }
+
+    .orders-list {
+        display: grid;
+        gap: 16px;
+    }
+
+    .order-card {
+        background: white;
+        border-radius: var(--radius);
+        border: 1px solid var(--border-color);
+        box-shadow: var(--shadow-sm);
+        transition: var(--transition);
+        overflow: hidden;
+        animation: slideIn 0.4s ease;
+    }
+
+    .order-card:hover {
+        box-shadow: var(--shadow-md);
+        transform: translateY(-2px);
+        border-color: var(--primary-color);
+    }
+
+    .order-card-content {
+        padding: 24px;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .order-medicine-info {
+        display: flex;
+        gap: 16px;
+        flex: 1;
+        min-width: 280px;
+    }
+
+    .medicine-image {
+        width: 110px;
+        height: 110px;
+        border-radius: 8px;
+        overflow: hidden;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+
+    .medicine-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .no-image {
+        font-size: 48px;
+        opacity: 0.7;
+    }
+
+    .medicine-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+    }
+
+    .medicine-name {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin: 0 0 8px 0;
+        line-height: 1.3;
+    }
+
+    .medicine-manufacturer,
+    .medicine-category {
+        font-size: 13px;
+        color: var(--text-secondary);
+        margin: 6px 0;
+        display: flex;
+        gap: 8px;
+    }
+
+    .medicine-manufacturer strong,
+    .medicine-category strong {
+        font-weight: 600;
+        color: var(--text-primary);
+    }
+
+    .category-badge {
+        display: inline-block;
+        background: rgba(11, 92, 255, 0.1);
+        color: var(--primary-color);
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .order-info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+        min-width: 140px;
+    }
+
+    .order-price,
+    .order-date {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .price-label,
+    .date-label {
+        font-size: 11px;
+        color: var(--text-light);
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        font-weight: 600;
+    }
+
+    .price-value {
+        font-size: 24px;
+        font-weight: 800;
+        color: #00b050;
+        line-height: 1;
+    }
+
+    .date-value {
+        font-size: 14px;
+        color: var(--text-secondary);
+        font-weight: 500;
+    }
+
+    .btn-delete {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 16px;
+        font-size: 14px;
+        white-space: nowrap;
+        align-self: flex-end;
+        background-color: var(--danger-color);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: var(--transition);
+    }
+
+    .btn-delete:hover {
+        background-color: var(--danger-hover);
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+    }
+
+    .btn-delete:active {
+        transform: scale(0.98);
+    }
+
+    .btn-delete svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 80px 40px;
+        background: linear-gradient(135deg, var(--bg-light) 0%, #f0f4f8 100%);
+        border-radius: var(--radius);
+        border: 2px dashed var(--border-color);
+    }
+
+    .empty-icon {
+        font-size: 64px;
+        margin-bottom: 24px;
+        opacity: 0.8;
+    }
+
+    .empty-state h2 {
+        font-size: 26px;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin: 0 0 12px 0;
+    }
+
+    .empty-state p {
+        font-size: 15px;
+        color: var(--text-secondary);
+        margin: 0 0 28px 0;
+    }
+
+    .btn {
+        border-radius: 6px;
+        font-weight: 600;
+        transition: var(--transition);
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-primary {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 12px 24px;
+        font-size: 15px;
+    }
+
+    .btn-primary:hover {
+        background-color: #0a4cc4;
+        box-shadow: 0 4px 12px rgba(11, 92, 255, 0.3);
+        transform: translateY(-2px);
+    }
+
+    @@keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(12px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @@keyframes slideOut {
+        to {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+    }
+
+    @@media (max-width: 900px) {
+        .order-card-content {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .order-medicine-info {
+            width: 100%;
+            min-width: unset;
+        }
+
+        .order-info {
+            width: 100%;
+            flex-direction: row;
+            gap: 24px;
+            text-align: left;
+            min-width: unset;
+        }
+
+        .btn-delete {
+            align-self: stretch;
+            justify-content: center;
+        }
+
+        .orders-header h1 {
+            font-size: 28px;
+        }
+    }
+
+    @@media (max-width: 600px) {
+        .orders-container {
+            padding: 40px 16px;
+        }
+
+        .order-card-content {
+            padding: 16px;
+            gap: 12px;
+        }
+
+        .order-medicine-info {
+            gap: 12px;
+        }
+
+        .medicine-image {
+            width: 90px;
+            height: 90px;
+        }
+
+        .medicine-name {
+            font-size: 16px;
+        }
+
+        .price-value {
+            font-size: 20px;
+        }
+
+        .orders-header h1 {
+            font-size: 24px;
+        }
+
+        .empty-state {
+            padding: 50px 20px;
+        }
+    }
+</style>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function attachHandlers() {
+                const deleteButtons = document.querySelectorAll('.delete-order-btn');
+
+                deleteButtons.forEach(button => {
+                    button.replaceWith(button.cloneNode(true));
+                });
+
+                document.querySelectorAll('.delete-order-btn').forEach(button => {
+                    button.addEventListener('click', async function (e) {
+                        e.preventDefault();
+                        const orderId = this.getAttribute('data-order-id');
+                        
+                        if (!confirm('Вы уверены, что хотите удалить этот заказ?')) {
+                            return;
+                        }
+
+                        try {
+                            const response = await fetch('/Orders/Delete', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({ id: orderId })
+                            });
+
+                            if (response.ok) {
+                                const orderCard = document.querySelector(`[data-order-id="${orderId}"]`);
+                                if (orderCard) {
+                                    orderCard.style.animation = 'slideOut 0.3s ease';
+                                    setTimeout(() => orderCard.remove(), 300);
+                                }
+                            } else if (response.status === 401) {
+                                alert('Требуется вход в аккаунт');
+                                window.location.href = '/';
+                            } else {
+                                const errorText = await response.text();
+                                alert('Ошибка при удалении: ' + errorText);
+                            }
+                        } catch (error) {
+                            console.error('Ошибка:', error);
+                            alert('Произошла ошибка при удалении заказа');
+                        }
+                    });
+                });
+            }
+
+            attachHandlers();
+        });
+    </script>
+}

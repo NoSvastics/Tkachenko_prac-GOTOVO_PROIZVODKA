@@ -1,0 +1,103 @@
+@model TravelАgency.Domain.ViewModels.Lekarstva.LekarstvaPageViewModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = Model?.Name ?? "Детали препарата";
+}
+
+<main class="container" style="padding: 40px 20px;">
+    <div class="product-page">
+        <div class="product-grid" style="display:grid; grid-template-columns: 420px 1fr; gap:24px;">
+            <div class="product-gallery">
+                <div class="main-img" style="height:380px; background:#f6f7fb; display:flex; align-items:center; justify-content:center; border-radius:8px; overflow:hidden;">
+                    @if (!string.IsNullOrEmpty(Model?.PathImg))
+                    {
+                        <img src="@Model.PathImg" alt="@Model.Name" style="width:100%; height:100%; object-fit:cover;" />
+                    }
+                    else
+                    {
+                        <div style="color:#888;">Нет изображения</div>
+                    }
+                </div>
+
+                @if (Model?.Pictures != null && Model.Pictures.Count > 0)
+                {
+                    <div class="thumbs" style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
+                        @foreach (var pic in Model.Pictures)
+                        {
+                            <img src="@pic.PathImg" alt="thumb" style="width:80px; height:80px; object-fit:cover; border-radius:6px; cursor:pointer;" onclick="document.querySelector('.main-img img').src='@pic.PathImg'" />
+                        }
+                    </div>
+                }
+            </div>
+
+            <div class="product-info">
+                <h1 style="margin:0 0 8px 0;">@Model.Name</h1>
+                <p style="margin:0 0 12px 0; color:#666;">@Model.Manufacturer</p>
+
+                <p style="margin:0 0 8px;"><strong>Категория:</strong> @Model.Category</p>
+
+                <div style="margin:16px 0; color:#333;">
+                    @if (!string.IsNullOrEmpty(Model.Description))
+                    {
+                        <p>@Model.Description</p>
+                    }
+                    else
+                    {
+                        <p style="color:#777;">Описание отсутствует.</p>
+                    }
+                </div>
+
+                <div style="display:flex; align-items:center; gap:16px; margin-top:20px;">
+                    <div style="font-size:22px; font-weight:700; color:#1a1a1a;">
+                        @Model.Price.ToString("C0")
+                    </div>
+
+                    <div style="display:flex; gap:8px;">
+                        <button class="btn btn-primary" style="padding:10px 16px;" onclick="addToCart('@Model.Id')">В корзину</button>
+                        <a class="btn btn-outline" href="/Orders/List" style="padding:10px 14px; display:inline-flex; align-items:center; justify-content:center; border:1px solid #ccc; border-radius:6px; text-decoration:none; color:inherit;">Перейти в корзину</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<style>
+    .btn { cursor:pointer; border-radius:6px; }
+    .btn-primary { background:#0b5cff; color:#fff; border:none; }
+    .btn-outline { background:transparent; color:#333; }
+    @@media (max-width: 800px) {
+        .product-grid { grid-template-columns: 1fr !important; }
+        .main-img { height:260px !important; }
+    }
+</style>
+
+@section Scripts {
+<script>
+    async function addToCart(id) {
+        try {
+            const resp = await fetch('/Orders/Create', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id: id })
+            });
+
+            if (resp.status === 401) {
+                alert('Требуется вход в аккаунт');
+                window.location.href = '/';
+                return;
+            }
+
+            if (resp.ok) {
+                alert('Добавлено в корзину');
+            } else {
+                const text = await resp.text();
+                alert('Ошибка: ' + text);
+            }
+        } catch (err) {
+            console.error(err);
+            alert('Ошибка при добавлении в корзину');
+        }
+    }
+</script>
+}

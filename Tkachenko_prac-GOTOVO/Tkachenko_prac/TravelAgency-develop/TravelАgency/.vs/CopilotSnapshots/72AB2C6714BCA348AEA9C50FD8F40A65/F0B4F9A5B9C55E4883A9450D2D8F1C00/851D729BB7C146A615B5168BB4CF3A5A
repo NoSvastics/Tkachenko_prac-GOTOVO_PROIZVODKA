@@ -1,0 +1,187 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using TravelАgency.Domain.ViewModels.LoginAndRegistration;
+using TravelAgency.Service.Interfaces;
+using TravelАgency.Domain.Models;
+using AutoMapper;
+using TravelАgency.Service;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication.Google;
+
+namespace TravelАgency.Controllers
+{
+    public class HomeController : Controller
+    {
+        private readonly ILogger<HomeController> _logger;
+
+        private readonly IAccountService _accountService;
+
+        private IMapper _mapper { get; set; }
+
+        MapperConfiguration mapperConfiguration = new MapperConfiguration(p =>
+        {
+            p.AddProfile<AppMappingProfile>();
+        });
+
+        private readonly IWebHostEnvironment _appEnvironment;
+
+        public HomeController(ILogger<HomeController> logger, IAccountService accountService, IWebHostEnvironment appEnvironment)
+        {
+            _accountService = accountService;
+            _logger = logger;
+            _mapper = mapperConfiguration.CreateMapper();
+            _appEnvironment = appEnvironment;
+        }
+
+        public IActionResult SiteInformation()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login([FromBody] LoginViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = _mapper.Map<User>(model);
+
+                var response = await _accountService.Login(user);
+                if (response.StatusCode == Domain.Enum.StatusCode.OK)
+                {
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                       new ClaimsPrincipal(response.Data));
+
+                    return Ok(model);
+                }
+
+                ModelState.AddModelError("", response.Description);
+
+            }
+            // Создание списка ошибок
+            var errors = ModelState.Values.SelectMany(v => v.Errors)
+                                           .Select(e => e.ErrorMessage)
+                                           .ToList();
+            return BadRequest(errors); // Возвращаем ошибки 400 Bad Request с
+                                       // сообщениями об ошибках
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> Register([FromBody] RegisterViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = _mapper.Map<User>(model);
+
+                var confirm = _mapper.Map<ConfirmEmailViewModel>(model);
+
+                var code = await _accountService.Register(user);
+
+                confirm.GeneratedCode = code.Data;
+
+                return Ok(confirm);
+
+            }
+            var errors = ModelState.Values.SelectMany(v => v.Errors)
+                                           .Select(e => e.ErrorMessage)
+                                           .ToList();
+            return BadRequest(errors);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ConfirmEmail([FromBody] ConfirmEmailViewModel confirmEmailModel)
+        {
+            var user = _mapper.Map<User>(confirmEmailModel);
+
+            var response = await _accountService.ConfirmEmail(user, confirmEmailModel.GeneratedCode, confirmEmailModel.CodeConfirm);
+
+            if (response.StatusCode == Domain.Enum.StatusCode.OK)
+            {
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                    new ClaimsPrincipal(response.Data));
+
+                return Ok(confirmEmailModel);
+            }
+            ModelState.AddModelError("", response.Description);
+
+            var errors = ModelState.Values.SelectMany(v => v.Errors)
+                                          .Select(e => e.ErrorMessage)
+                                          .ToList();
+
+            return BadRequest(errors);
+        }
+
+
+        [AutoValidateAntiforgeryToken]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            return RedirectToAction("SiteInformation", "Home");
+        }
+
+        public IActionResult AuthenticationGoogle(string returnUrl = "/")
+        {
+            var properties = new AuthenticationProperties
+            {
+                RedirectUri = Url.Action("GoogleResponse", new { returnUrl }),
+                Items = { { "prompt", "select_account" } }
+            };
+
+            return Challenge(properties, GoogleDefaults.AuthenticationScheme);
+        }
+
+        public async Task<IActionResult> GoogleResponse(string returnUrl = "/")
+        {
+            try
+            {
+                var result = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+                if (result?.Succeeded == true)
+                {
+                    User model = new User
+                    {
+                        Login = result.Principal.FindFirst(ClaimTypes.Name)?.Value,
+                        Email = result.Principal.FindFirst(ClaimTypes.Email)?.Value,
+                        PathImage = "/" + SaveImageInImageUser(result.Principal.FindFirst("picture")?.Value, result).Result ?? "/images/user.png"
+                    };
+
+                    var response = await _accountService.IsCreatedAccount(model);
+
+                    if (response.StatusCode == Domain.Enum.StatusCode.OK)
+                    {
+                        await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                            new ClaimsPrincipal(response.Data));
+                        return Redirect(returnUrl);
+
+                    }
+                }
+
+                return BadRequest("Аутентификация не удалась.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        private async Task<string> SaveImageInImageUser(string imageUrl, AuthenticateResult result)
+        {
+            string filePath = "";
+            if (!string.IsNullOrEmpty(imageUrl))
+            {
+                using (var httpClient = new HttpClient())
+                {
+                    filePath = Path.Combine("ImageUser", $"{result.Principal.FindFirst(ClaimTypes.Email)?.Value}-avatar.jpg");
+
+
+                    var imageBytes = await httpClient.GetByteArrayAsync(imageUrl);
+
+                    await System.IO.File.WriteAllBytesAsync(Path.Combine(_appEnvironment.WebRootPath, filePath), imageBytes);
+                }
+            }
+            return filePath;
+        }
+    }
+}

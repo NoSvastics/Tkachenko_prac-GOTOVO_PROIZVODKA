@@ -1,0 +1,262 @@
+﻿@media (max-width: 992px) {
+    .button-header {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .icon {
+        display: flex;
+    }
+
+    .block-container {
+        width: 95%;
+        max-width: 600px;
+        min-height: auto;
+    }
+
+    .block {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .block_item {
+        width: 100%;
+    }
+
+    .form-box {
+        width: 100%;
+        height: auto;
+        position: static;
+        box-shadow: none;
+        border-radius: 0 0 16px 16px;
+    }
+
+        .form-box.active {
+            left: 0;
+            top: 150px;
+        }
+
+    .form {
+        padding: 40px 30px;
+        position: relative;
+        left: 0 !important;
+        transition: none;
+    }
+
+    .form_signin {
+        left: 0;
+        display: block;
+    }
+
+    .form_signup {
+        left: 0;
+        display: none;
+    }
+
+    .form-box.active .form_signin {
+        left: 0;
+        display: none;
+    }
+
+    .form-box.active .form_signup {
+        left: 0;
+        display: block;
+    }
+
+    .confirm-email-form {
+        width: 90%;
+        max-width: 450px;
+        padding: 30px;
+        margin: 50px auto;
+    }
+
+    .block-item_title {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .form_title {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .block-container {
+        width: 95%;
+        max-width: 500px;
+    }
+
+    .form-box label {
+        margin-bottom: 20px;
+    }
+
+    .form-box input {
+        padding: 12px 14px;
+        font-size: 13px;
+    }
+
+    .form {
+        padding: 30px 20px;
+    }
+
+    .form_title {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .form-btn {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    .block-item_btn {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    .block-item_title {
+        font-size: 1.1rem;
+    }
+
+    .google-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .confirm-email-form {
+        width: 90%;
+        max-width: 400px;
+        padding: 25px;
+    }
+
+    .button_confirm {
+        min-width: 100px;
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .form_title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .block-container {
+        width: 95%;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .block {
+        border-radius: 12px;
+    }
+
+    .block_item {
+        padding: 20px 15px;
+    }
+
+    .block-item_title {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+
+    .block-item_btn {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+
+    .form {
+        padding: 20px 15px;
+    }
+
+    .form_title {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    .form-box label {
+        margin-bottom: 15px;
+    }
+
+    .form-box input {
+        padding: 11px 12px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+
+    span {
+        font-size: 12px;
+        top: 11px;
+        left: 12px;
+    }
+
+    .form-btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .form-btn-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+        .form-btn-container a {
+            justify-content: center;
+        }
+
+    .google-img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .error {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+
+    .confirm-email-form {
+        width: 95%;
+        max-width: 350px;
+        padding: 20px 15px;
+        margin: 30px auto;
+    }
+
+        .confirm-email-form .form_title {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .confirm-email-form p {
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .confirm-email-form input {
+            padding: 10px 12px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+    .button_confirm_container {
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px auto 0;
+    }
+
+    .button_confirm {
+        width: 100%;
+        min-width: unset;
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .warning {
+        font-size: 12px;
+        padding: 10px 12px;
+        margin-top: 12px;
+    }
+}

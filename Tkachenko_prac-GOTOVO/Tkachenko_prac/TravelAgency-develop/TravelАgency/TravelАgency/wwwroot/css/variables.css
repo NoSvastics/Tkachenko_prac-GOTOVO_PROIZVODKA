@@ -1,0 +1,23 @@
+﻿:root {
+    /* Цвета (Медицинская тема) */
+    --primary: #2563eb; /* Синий основной */
+    --primary-dark: #1d4ed8; /* Синий темный (ховер) */
+    --secondary: #10b981; /* Зеленый (успех/акцент) */
+    --dark: #1e293b; /* Текст основной */
+    --gray: #64748b; /* Текст вторичный */
+    --light: #f8fafc; /* Фон */
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --danger: #ef4444;
+    /* Размеры */
+    --container: 1200px;
+    --header-height: 70px;
+    --radius: 12px;
+    /* Тени */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+    /* Z-Index */
+    --z-nav: 1000;
+    --z-modal: 2000;
+}

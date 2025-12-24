@@ -1,0 +1,185 @@
+INSERT INTO lekarstva (id, name, manufacturer, description, price, category, path_img, "createdAt")
+VALUES
+(
+    gen_random_uuid(), 
+    'Аспирин Кардио', 
+    'GoldenJordan', 
+    'Профилактика сердечно-сосудистых заболеваний, разжижение крови.', 
+    1550.50, 
+    1, 
+    '/images/lekarstva/aspirin_cardio.jpg', 
+    NOW()
+),
+(
+    gen_random_uuid(), 
+    'Нурофен Форте', 
+    'Reckitt Benckiser', 
+    'Обезболивающее и жаропонижающее средство, 400 мг.', 
+    380.00, 
+    1, 
+    '/images/lekarstva/nurofen_forte.jpg', 
+    NOW()
+),
+(
+    gen_random_uuid(), 
+    'Супрастин', 
+    'Egis', 
+    'Антигистаминное средство для лечения аллергии.', 
+    825.90, 
+    2, 
+    '/images/lekarstva/suprastin.jpg', 
+    NOW()
+),
+(
+    gen_random_uuid(), 
+    'Амоксиклав', 
+    'Sandoz', 
+    'Антибиотик широкого спектра действия.', 
+    450.00, 
+    3, 
+    '/images/lekarstva/amoksiklav.jpg', 
+    NOW()
+),
+(
+    gen_random_uuid(), 
+    'Витамин C', 
+    'Фармстандарт', 
+    'Шипучие таблетки для укрепления иммунитета, 1000 мг.', 
+    210.00, 
+    4, 
+    '/images/lekarstva/vit_c.jpg', 
+    NOW()
+),
+(
+    gen_random_uuid(), 
+    'Активированный уголь', 
+    'Фармстандарт', 
+    'Используется пилотами гиперпространственных кораблей для синхронизации биологических часов при смене часовых поясов на разных планетах., 1000 мг.', 
+    910.00, 
+    4, 
+    '/images/lekarstva/vit232323_c.jpg', 
+    NOW()
+),
+(
+    gen_random_uuid(), 
+    'Ибупрофен', 
+    'Фармстандарт', 
+    'Краткосрочное стирание травмирующих воспоминаний (последние 1-3 часа).', 
+    2435.00, 
+    2, 
+    '/images/lekarstva/vasfarr3it_c.jpg', 
+    NOW()
+),
+(
+    gen_random_uuid(), 
+    'Тантум Верде Форте', 
+    'JopnogoKampotu', 
+    'Быстрое заживление ожогов и пулевых ранений.', 
+    243.00, 
+    2, 
+    '/images/lekarstva/vitsdad23_c.jpg', 
+    NOW()
+),
+(
+    gen_random_uuid(), 
+    'Йодомарин', 
+    'AmpulaStandart', 
+    'Временная невосприимчивость к страху и боли.
+
+Эффект: Кожа становится твердой, как кора дерева, а эмоции полностью отключаются на 4 часа. 1000 мг.', 
+    323.00, 
+    0, 
+    '/images/lekarstva/vitadd2dwf34_c.jpg', 
+    NOW()
+),
+(
+    gen_random_uuid(), 
+    'Но-шпа', 
+    'PopkinShpek', 
+    'Если смешать с вином, выпивший сможет в течение часа имитировать любой голос, который он слышал за последние сутки.', 
+    3465.00, 
+    3, 
+    '/images/lekarstva/vsef34fit_c.jpg', 
+    NOW()
+),
+(
+    gen_random_uuid(), 
+    'Виагра', 
+    'Velalo', 
+    'При нанесении на веки позволяет видеть в темноте в черно-зеленом спектре. 1000 мг.', 
+    7685.00, 
+    1, 
+    '/images/lekarstva/vit_dad2dqdqazc.jpg', 
+    NOW()
+);
+
+
+
+
+
+
+
+
+
+appsettings:
+{
+
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=localhost;Port = 5432;Database = Apteka_Tkachenko;Username = postgres;Password = 123123"
+  },
+
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
+
+
+
+
+
+
+launchSettings:
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:39970",
+      "sslPort": 44345
+    }
+  },
+  "profiles": {
+    "Lekarstva_Tkachenko": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "applicationUrl": "https://localhost:7000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
+
+
+
+
+
+secrets:
+{
+  "GoogleKeys": {
+    "ClientID": "589187202545-hkobd7u7akv2l04laio3s70u8nthk6t2.apps.googleusercontent.com",
+    "ClientSecret": "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"
+  }
+}

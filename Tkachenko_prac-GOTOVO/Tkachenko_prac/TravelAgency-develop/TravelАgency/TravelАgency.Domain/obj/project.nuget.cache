@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "B0kaMvqOZCA=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\TravelАgency\\TravelАgency.Domain\\TravelАgency.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\WeirdToday\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\WeirdToday\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\WeirdToday\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
+    "C:\\Users\\WeirdToday\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

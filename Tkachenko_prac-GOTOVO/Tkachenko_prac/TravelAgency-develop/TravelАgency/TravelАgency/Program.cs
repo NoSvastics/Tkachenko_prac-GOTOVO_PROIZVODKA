@@ -1,0 +1,65 @@
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.EntityFrameworkCore;
+using TravelАgency;
+using TravelАgency.DAL;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+
+string connection = builder.Configuration.GetConnectionString("DefaultConnection");
+
+// добавляем контекст ApplicationDbContext в качестве сервиса в приложение
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connection));
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Home/Login");
+        options.AccessDeniedPath = new Microsoft.AspNetCore.Http.PathString("/Home/Login");
+        options.Cookie.SameSite = SameSiteMode.Lax; // ДОБАВЬТЕ ЭТО
+        options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest; // ДОБАВЬТЕ ЭТО
+    })
+    .AddGoogle(GoogleDefaults.AuthenticationScheme, options =>
+    {
+        options.ClientId = builder.Configuration.GetSection("GoogleKeys:ClientId").Value;
+        options.ClientSecret = builder.Configuration.GetSection("GoogleKeys:ClientSecret").Value;
+        options.CallbackPath = "/signin-google"; // ДОБАВЬТЕ ЭТО ЯВНО
+        options.SaveTokens = true; // ДОБАВЬТЕ ЭТО
+        options.Scope.Add("profile");
+        options.ClaimActions.MapJsonKey("picture", "picture");
+
+        // Корреляция cookies
+        options.CorrelationCookie.SameSite = SameSiteMode.Lax; // ДОБАВЬТЕ ЭТО
+        options.CorrelationCookie.SecurePolicy = CookieSecurePolicy.SameAsRequest; // ДОБАВЬТЕ ЭТО
+    });
+
+builder.Services.InitializeRepositories();
+builder.Services.InitializeServices();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+app.UseRouting();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=SiteInformation}/{id?}");
+
+app.Run();

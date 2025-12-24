@@ -1,0 +1,91 @@
+﻿#header-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    z-index: var(--z-nav);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.menu ul {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    font-weight: 500;
+    color: var(--dark);
+}
+
+    .menu a:hover {
+        color: var(--primary);
+    }
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: var(--dark);
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+
+/* Мобильное меню */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    z-index: var(--z-modal);
+    padding: 80px 20px;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+    .side-menu.active {
+        right: 0;
+    }
+
+    .side-menu a {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+@media (max-width: 992px) {
+    .menu, .button-header {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}

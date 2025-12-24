@@ -1,0 +1,145 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Главная";
+}
+
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Управление аптекой <br><span>Просто и эффективно</span></h1>
+            <p>Автоматизация учета, заказов и аналитики в одной системе.</p>
+            <div class="hero-btns">
+                <button class="btn btn-primary" onclick="openModal()">Начать работу</button>
+                <a href="#features" class="btn btn-outline">Узнать больше</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="features" style="padding: 80px 0;">
+    <div class="container">
+        <h2 class="section-title">Функции системы</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon">💊</div>
+                <h3>Учет лекарств</h3>
+                <p>Полный контроль склада и сроков годности препаратов.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📋</div>
+                <h3>Заказы</h3>
+                <p>Удобная обработка заказов от клиентов и поставщиков.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📊</div>
+                <h3>Аналитика</h3>
+                <p>Детальные отчеты о продажах и выручке.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" style="background: #f1f5f9; padding: 80px 0;">
+    <div class="container">
+        <h2 class="section-title">Контакты</h2>
+        <div class="contacts-wrapper">
+            <form class="contact-form">
+                <h3>Напишите нам</h3>
+                <input type="text" placeholder="Ваше имя">
+                <input type="email" placeholder="Email">
+                <textarea rows="4" placeholder="Сообщение"></textarea>
+                <button class="btn btn-primary" style="width:100%">Отправить</button>
+            </form>
+            <div class="map-box">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A18fe6a02120de3f93884a5ecbcb2af9822e2f3f8e2e715d3c6fedf6243fb177b&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Стили специально для главной (можно вынести в home.css, но так удобнее) */
+    .hero-section {
+        background: linear-gradient(135deg, var(--primary), #4f46e5);
+        padding: 120px 0;
+        color: white;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        font-weight: 800;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        opacity: 0.9;
+    }
+
+    .hero-btns {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .feature-card {
+        background: white;
+        padding: 40px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-md);
+        text-align: center;
+        transition: 0.3s;
+    }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-card .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+    .contacts-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .contact-form {
+        background: white;
+        padding: 30px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-sm);
+    }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+    @@media (max-width: 768px) {
+        .hero-content h1
+
+    {
+        font-size: 2.5rem;
+    }
+
+    .contacts-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    }
+</style>

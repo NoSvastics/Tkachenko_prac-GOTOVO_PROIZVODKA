@@ -1,0 +1,807 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.domain\\modelsdb\\lekarstvadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|solutionrelative:travel\u0430gency.domain\\modelsdb\\lekarstvadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|solutionrelative:travel\u0430gency\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{608D13FE-E322-4C2D-99CA-7F251BE77127}|Travel\u0410gency.DAL\\Travel\u0410gency.DAL.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.dal\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{608D13FE-E322-4C2D-99CA-7F251BE77127}|Travel\u0410gency.DAL\\Travel\u0410gency.DAL.csproj|solutionrelative:travel\u0430gency.dal\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|solutionrelative:travel\u0430gency\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\WeirdToday\\AppData\\Roaming\\Microsoft\\UserSecrets\\520f27ab-0e8a-43c6-a096-53e7c096e781\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA390FC-54C7-4ECD-A997-0461EAFC31C1}|Travel\u0410gency.Service\\Travel\u0410gency.Service.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.service\\realizations\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA390FC-54C7-4ECD-A997-0461EAFC31C1}|Travel\u0410gency.Service\\Travel\u0410gency.Service.csproj|solutionrelative:travel\u0430gency.service\\realizations\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|solutionrelative:travel\u0430gency\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|solutionrelative:travel\u0430gency\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|solutionrelative:travel\u0430gency\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.DAL\\Migrations\\20251123161333_Init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Travel\u0410gency.DAL\\Migrations\\20251123161333_Init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency\\views\\orders\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|solutionrelative:travel\u0430gency\\views\\orders\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.domain\\enum\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|solutionrelative:travel\u0430gency.domain\\enum\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|solutionrelative:travel\u0430gency\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency\\controllers\\medicinescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|solutionrelative:travel\u0430gency\\controllers\\medicinescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency\\views\\medicines\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|solutionrelative:travel\u0430gency\\views\\medicines\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency\\views\\shared\\catalog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|solutionrelative:travel\u0430gency\\views\\shared\\catalog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA390FC-54C7-4ECD-A997-0461EAFC31C1}|Travel\u0410gency.Service\\Travel\u0410gency.Service.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.service\\realizations\\zakazservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA390FC-54C7-4ECD-A997-0461EAFC31C1}|Travel\u0410gency.Service\\Travel\u0410gency.Service.csproj|solutionrelative:travel\u0430gency.service\\realizations\\zakazservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency\\initializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|solutionrelative:travel\u0430gency\\initializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA390FC-54C7-4ECD-A997-0461EAFC31C1}|Travel\u0410gency.Service\\Travel\u0410gency.Service.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.service\\interfaces\\izakazservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA390FC-54C7-4ECD-A997-0461EAFC31C1}|Travel\u0410gency.Service\\Travel\u0410gency.Service.csproj|solutionrelative:travel\u0430gency.service\\interfaces\\izakazservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA390FC-54C7-4ECD-A997-0461EAFC31C1}|Travel\u0410gency.Service\\Travel\u0410gency.Service.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.service\\interfaces\\ilekarstvaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA390FC-54C7-4ECD-A997-0461EAFC31C1}|Travel\u0410gency.Service\\Travel\u0410gency.Service.csproj|solutionrelative:travel\u0430gency.service\\interfaces\\ilekarstvaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA390FC-54C7-4ECD-A997-0461EAFC31C1}|Travel\u0410gency.Service\\Travel\u0410gency.Service.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.service\\realizations\\lekarstvaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA390FC-54C7-4ECD-A997-0461EAFC31C1}|Travel\u0410gency.Service\\Travel\u0410gency.Service.csproj|solutionrelative:travel\u0430gency.service\\realizations\\lekarstvaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|solutionrelative:travel\u0430gency\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA390FC-54C7-4ECD-A997-0461EAFC31C1}|Travel\u0410gency.Service\\Travel\u0410gency.Service.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.service\\interfaces\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA390FC-54C7-4ECD-A997-0461EAFC31C1}|Travel\u0410gency.Service\\Travel\u0410gency.Service.csproj|solutionrelative:travel\u0430gency.service\\interfaces\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{608D13FE-E322-4C2D-99CA-7F251BE77127}|Travel\u0410gency.DAL\\Travel\u0410gency.DAL.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.dal\\storage\\lekarstvastorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{608D13FE-E322-4C2D-99CA-7F251BE77127}|Travel\u0410gency.DAL\\Travel\u0410gency.DAL.csproj|solutionrelative:travel\u0430gency.dal\\storage\\lekarstvastorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency\\views\\shared\\_loginregistrationpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|solutionrelative:travel\u0430gency\\views\\shared\\_loginregistrationpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency\\wwwroot\\css\\login_and_registration.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|solutionrelative:travel\u0430gency\\wwwroot\\css\\login_and_registration.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.domain\\viewmodels\\loginandregistration\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|solutionrelative:travel\u0430gency.domain\\viewmodels\\loginandregistration\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency\\wwwroot\\js\\usre_menu_script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|solutionrelative:travel\u0430gency\\wwwroot\\js\\usre_menu_script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency\\views\\shared\\_confirmemailpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|solutionrelative:travel\u0430gency\\views\\shared\\_confirmemailpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.DAL\\Migrations\\20251120212602_Init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{608D13FE-E322-4C2D-99CA-7F251BE77127}|Travel\u0410gency.DAL\\Travel\u0410gency.DAL.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.dal\\interfaces\\ibasestorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{608D13FE-E322-4C2D-99CA-7F251BE77127}|Travel\u0410gency.DAL\\Travel\u0410gency.DAL.csproj|solutionrelative:travel\u0430gency.dal\\interfaces\\ibasestorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.domain\\response\\baseresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|solutionrelative:travel\u0430gency.domain\\response\\baseresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency\\controllers\\lekarstvacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6BD157D-77B2-4E44-A9A4-9670F16C4E50}|Travel\u0410gency\\Travel\u0410gency.csproj|solutionrelative:travel\u0430gency\\controllers\\lekarstvacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA390FC-54C7-4ECD-A997-0461EAFC31C1}|Travel\u0410gency.Service\\Travel\u0410gency.Service.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.service\\appmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA390FC-54C7-4ECD-A997-0461EAFC31C1}|Travel\u0410gency.Service\\Travel\u0410gency.Service.csproj|solutionrelative:travel\u0430gency.service\\appmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.domain\\viewmodels\\lekarstvapageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|solutionrelative:travel\u0430gency.domain\\viewmodels\\lekarstvapageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.domain\\viewmodels\\lekarstvaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|solutionrelative:travel\u0430gency.domain\\viewmodels\\lekarstvaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.domain\\filter\\lekarstvafilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|solutionrelative:travel\u0430gency.domain\\filter\\lekarstvafilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.domain\\validators\\zakazvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|solutionrelative:travel\u0430gency.domain\\validators\\zakazvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.domain\\validators\\lekarstvavalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|solutionrelative:travel\u0430gency.domain\\validators\\lekarstvavalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{608D13FE-E322-4C2D-99CA-7F251BE77127}|Travel\u0410gency.DAL\\Travel\u0410gency.DAL.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.dal\\storage\\zakazstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{608D13FE-E322-4C2D-99CA-7F251BE77127}|Travel\u0410gency.DAL\\Travel\u0410gency.DAL.csproj|solutionrelative:travel\u0430gency.dal\\storage\\zakazstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{608D13FE-E322-4C2D-99CA-7F251BE77127}|Travel\u0410gency.DAL\\Travel\u0410gency.DAL.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.dal\\storage\\picturelekarstvastorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{608D13FE-E322-4C2D-99CA-7F251BE77127}|Travel\u0410gency.DAL\\Travel\u0410gency.DAL.csproj|solutionrelative:travel\u0430gency.dal\\storage\\picturelekarstvastorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.domain\\modelsdb\\zakazdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|solutionrelative:travel\u0430gency.domain\\modelsdb\\zakazdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.domain\\modelsdb\\picturelekarstvadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|solutionrelative:travel\u0430gency.domain\\modelsdb\\picturelekarstvadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.domain\\models\\zakaz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|solutionrelative:travel\u0430gency.domain\\models\\zakaz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.domain\\models\\picturelekarstva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|solutionrelative:travel\u0430gency.domain\\models\\picturelekarstva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.domain\\models\\lekarstva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|solutionrelative:travel\u0430gency.domain\\models\\lekarstva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.domain\\travel\u0430gency.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7A4BBD9F-7032-4A9F-802E-BB3AB5B3C6A4}|Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj|solutionrelative:travel\u0430gency.domain\\travel\u0430gency.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA390FC-54C7-4ECD-A997-0461EAFC31C1}|Travel\u0410gency.Service\\Travel\u0410gency.Service.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.service\\helpersservice\\authenticateuserhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA390FC-54C7-4ECD-A997-0461EAFC31C1}|Travel\u0410gency.Service\\Travel\u0410gency.Service.csproj|solutionrelative:travel\u0430gency.service\\helpersservice\\authenticateuserhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{608D13FE-E322-4C2D-99CA-7F251BE77127}|Travel\u0410gency.DAL\\Travel\u0410gency.DAL.csproj|c:\\users\\weirdtoday\\desktop\\tkachenko_prac-gotovo\\tkachenko_prac\\travelagency-develop\\travel\u0430gency\\travel\u0430gency.dal\\migrations\\20251124094825_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{608D13FE-E322-4C2D-99CA-7F251BE77127}|Travel\u0410gency.DAL\\Travel\u0410gency.DAL.csproj|solutionrelative:travel\u0430gency.dal\\migrations\\20251124094825_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Program.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency\\Program.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Program.cs",
+              "RelativeToolTip": "Travel\u0410gency\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T10:01:15.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\AppData\\Roaming\\Microsoft\\UserSecrets\\520f27ab-0e8a-43c6-a096-53e7c096e781\\secrets.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\520f27ab-0e8a-43c6-a096-53e7c096e781\\secrets.json",
+              "ToolTip": "C:\\Users\\WeirdToday\\AppData\\Roaming\\Microsoft\\UserSecrets\\520f27ab-0e8a-43c6-a096-53e7c096e781\\secrets.json",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\520f27ab-0e8a-43c6-a096-53e7c096e781\\secrets.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-20T18:56:26.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\appsettings.json",
+              "RelativeDocumentMoniker": "Travel\u0410gency\\appsettings.json",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\appsettings.json",
+              "RelativeToolTip": "Travel\u0410gency\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-20T18:56:44.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Travel\u0410gency\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Travel\u0410gency\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-20T21:25:04.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Travel\u0410gency\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:22:46.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LekarstvaDb.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\ModelsDb\\LekarstvaDb.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Domain\\ModelsDb\\LekarstvaDb.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\ModelsDb\\LekarstvaDb.cs",
+              "RelativeToolTip": "Travel\u0410gency.Domain\\ModelsDb\\LekarstvaDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:15:24.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "20251124094825_Init.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.DAL\\Migrations\\20251124094825_Init.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.DAL\\Migrations\\20251124094825_Init.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.DAL\\Migrations\\20251124094825_Init.cs",
+              "RelativeToolTip": "Travel\u0410gency.DAL\\Migrations\\20251124094825_Init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T09:48:25.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.DAL\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.DAL\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.DAL\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Travel\u0410gency.DAL\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:16:19.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "AuthenticateUserHelper.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Service\\HelpersService\\AuthenticateUserHelper.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Service\\HelpersService\\AuthenticateUserHelper.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Service\\HelpersService\\AuthenticateUserHelper.cs",
+              "RelativeToolTip": "Travel\u0410gency.Service\\HelpersService\\AuthenticateUserHelper.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T16:25:21.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Service\\Realizations\\AccountService.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Service\\Realizations\\AccountService.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Service\\Realizations\\AccountService.cs",
+              "RelativeToolTip": "Travel\u0410gency.Service\\Realizations\\AccountService.cs",
+              "ViewState": "AgIAAMgAAAAAAAAAAAAqwOQAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:25:20.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ZakazService.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Service\\Realizations\\ZakazService.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Service\\Realizations\\ZakazService.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Service\\Realizations\\ZakazService.cs",
+              "RelativeToolTip": "Travel\u0410gency.Service\\Realizations\\ZakazService.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwBQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T23:15:13.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\Enum\\Category.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Domain\\Enum\\Category.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\Enum\\Category.cs",
+              "RelativeToolTip": "Travel\u0410gency.Domain\\Enum\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:12:48.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Views\\Orders\\List.cshtml",
+              "RelativeDocumentMoniker": "Travel\u0410gency\\Views\\Orders\\List.cshtml",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Views\\Orders\\List.cshtml",
+              "RelativeToolTip": "Travel\u0410gency\\Views\\Orders\\List.cshtml",
+              "ViewState": "AgIAAIYBAAAAAAAAAADgv5sBAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T23:01:13.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20251123161333_Init.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.DAL\\Migrations\\20251123161333_Init.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.DAL\\Migrations\\20251123161333_Init.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.DAL\\Migrations\\20251123161333_Init.cs",
+              "RelativeToolTip": "Travel\u0410gency.DAL\\Migrations\\20251123161333_Init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T16:13:33.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MedicinesController.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Controllers\\MedicinesController.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency\\Controllers\\MedicinesController.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Controllers\\MedicinesController.cs",
+              "RelativeToolTip": "Travel\u0410gency\\Controllers\\MedicinesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:45:06.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Travel\u0410gency\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Travel\u0410gency\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBsAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T21:45:47.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Travel\u0410gency\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAEBVwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:45:26.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IZakazService.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Service\\Interfaces\\IZakazService.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Service\\Interfaces\\IZakazService.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Service\\Interfaces\\IZakazService.cs",
+              "RelativeToolTip": "Travel\u0410gency.Service\\Interfaces\\IZakazService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T23:04:50.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Views\\Medicines\\Details.cshtml",
+              "RelativeDocumentMoniker": "Travel\u0410gency\\Views\\Medicines\\Details.cshtml",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Views\\Medicines\\Details.cshtml",
+              "RelativeToolTip": "Travel\u0410gency\\Views\\Medicines\\Details.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAADgv0QAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T23:48:06.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Travel\u0410gency\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAuwGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T23:00:37.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Initializer.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Initializer.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency\\Initializer.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Initializer.cs",
+              "RelativeToolTip": "Travel\u0410gency\\Initializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:22:03.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ILekarstvaService.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Service\\Interfaces\\ILekarstvaService.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Service\\Interfaces\\ILekarstvaService.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Service\\Interfaces\\ILekarstvaService.cs",
+              "RelativeToolTip": "Travel\u0410gency.Service\\Interfaces\\ILekarstvaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:21:22.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Catalog.cshtml",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Views\\Shared\\Catalog.cshtml",
+              "RelativeDocumentMoniker": "Travel\u0410gency\\Views\\Shared\\Catalog.cshtml",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Views\\Shared\\Catalog.cshtml",
+              "RelativeToolTip": "Travel\u0410gency\\Views\\Shared\\Catalog.cshtml",
+              "ViewState": "AgIAAL4AAAAAAAAAAADwv9sAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T21:42:48.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "LekarstvaService.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Service\\Realizations\\LekarstvaService.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Service\\Realizations\\LekarstvaService.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Service\\Realizations\\LekarstvaService.cs",
+              "RelativeToolTip": "Travel\u0410gency.Service\\Realizations\\LekarstvaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:21:46.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IAccountService.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Service\\Interfaces\\IAccountService.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Service\\Interfaces\\IAccountService.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Service\\Interfaces\\IAccountService.cs",
+              "RelativeToolTip": "Travel\u0410gency.Service\\Interfaces\\IAccountService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T23:01:55.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "LekarstvaStorage.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.DAL\\Storage\\LekarstvaStorage.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.DAL\\Storage\\LekarstvaStorage.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.DAL\\Storage\\LekarstvaStorage.cs",
+              "RelativeToolTip": "Travel\u0410gency.DAL\\Storage\\LekarstvaStorage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:16:50.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "usre_menu_script.js",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\wwwroot\\js\\usre_menu_script.js",
+              "RelativeDocumentMoniker": "Travel\u0410gency\\wwwroot\\js\\usre_menu_script.js",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\wwwroot\\js\\usre_menu_script.js",
+              "RelativeToolTip": "Travel\u0410gency\\wwwroot\\js\\usre_menu_script.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-20T21:42:16.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "_LoginRegistrationPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Views\\Shared\\_LoginRegistrationPartial.cshtml",
+              "RelativeDocumentMoniker": "Travel\u0410gency\\Views\\Shared\\_LoginRegistrationPartial.cshtml",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Views\\Shared\\_LoginRegistrationPartial.cshtml",
+              "RelativeToolTip": "Travel\u0410gency\\Views\\Shared\\_LoginRegistrationPartial.cshtml",
+              "ViewState": "AgIAALcAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T21:54:27.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\ViewModels\\LoginAndRegistration\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Domain\\ViewModels\\LoginAndRegistration\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\ViewModels\\LoginAndRegistration\\RegisterViewModel.cs",
+              "RelativeToolTip": "Travel\u0410gency.Domain\\ViewModels\\LoginAndRegistration\\RegisterViewModel.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:54:14.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "login_and_registration.css",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\wwwroot\\css\\login_and_registration.css",
+              "RelativeDocumentMoniker": "Travel\u0410gency\\wwwroot\\css\\login_and_registration.css",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\wwwroot\\css\\login_and_registration.css",
+              "RelativeToolTip": "Travel\u0410gency\\wwwroot\\css\\login_and_registration.css",
+              "ViewState": "AgIAAMsAAAAAAAAAAAAWwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T21:54:40.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "_ConfirmEmailPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Views\\Shared\\_ConfirmEmailPartial.cshtml",
+              "RelativeDocumentMoniker": "Travel\u0410gency\\Views\\Shared\\_ConfirmEmailPartial.cshtml",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Views\\Shared\\_ConfirmEmailPartial.cshtml",
+              "RelativeToolTip": "Travel\u0410gency\\Views\\Shared\\_ConfirmEmailPartial.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T21:41:12.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "20251120212602_Init.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.DAL\\Migrations\\20251120212602_Init.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.DAL\\Migrations\\20251120212602_Init.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.DAL\\Migrations\\20251120212602_Init.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.DAL\\Migrations\\20251120212602_Init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:26:02.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IBaseStorage.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.DAL\\Interfaces\\IBaseStorage.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.DAL\\Interfaces\\IBaseStorage.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.DAL\\Interfaces\\IBaseStorage.cs",
+              "RelativeToolTip": "Travel\u0410gency.DAL\\Interfaces\\IBaseStorage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:23:05.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "BaseResponse.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\Response\\BaseResponse.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Domain\\Response\\BaseResponse.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\Response\\BaseResponse.cs",
+              "RelativeToolTip": "Travel\u0410gency.Domain\\Response\\BaseResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:23:01.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "LekarstvaController.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Controllers\\LekarstvaController.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency\\Controllers\\LekarstvaController.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency\\Controllers\\LekarstvaController.cs",
+              "RelativeToolTip": "Travel\u0410gency\\Controllers\\LekarstvaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:22:23.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "AppMappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Service\\AppMappingProfile.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Service\\AppMappingProfile.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Service\\AppMappingProfile.cs",
+              "RelativeToolTip": "Travel\u0410gency.Service\\AppMappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwCAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:20:33.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "LekarstvaPageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\ViewModels\\LekarstvaPageViewModel.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Domain\\ViewModels\\LekarstvaPageViewModel.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\ViewModels\\LekarstvaPageViewModel.cs",
+              "RelativeToolTip": "Travel\u0410gency.Domain\\ViewModels\\LekarstvaPageViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:20:06.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "LekarstvaViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\ViewModels\\LekarstvaViewModel.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Domain\\ViewModels\\LekarstvaViewModel.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\ViewModels\\LekarstvaViewModel.cs",
+              "RelativeToolTip": "Travel\u0410gency.Domain\\ViewModels\\LekarstvaViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:19:27.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "LekarstvaFilter.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\Filter\\LekarstvaFilter.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Domain\\Filter\\LekarstvaFilter.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\Filter\\LekarstvaFilter.cs",
+              "RelativeToolTip": "Travel\u0410gency.Domain\\Filter\\LekarstvaFilter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:18:44.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ZakazValidator.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\Validators\\ZakazValidator.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Domain\\Validators\\ZakazValidator.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\Validators\\ZakazValidator.cs",
+              "RelativeToolTip": "Travel\u0410gency.Domain\\Validators\\ZakazValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:17:58.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "LekarstvaValidator.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\Validators\\LekarstvaValidator.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Domain\\Validators\\LekarstvaValidator.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\Validators\\LekarstvaValidator.cs",
+              "RelativeToolTip": "Travel\u0410gency.Domain\\Validators\\LekarstvaValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:17:46.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ZakazStorage.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.DAL\\Storage\\ZakazStorage.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.DAL\\Storage\\ZakazStorage.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.DAL\\Storage\\ZakazStorage.cs",
+              "RelativeToolTip": "Travel\u0410gency.DAL\\Storage\\ZakazStorage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:17:26.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "PictureLekarstvaStorage.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.DAL\\Storage\\PictureLekarstvaStorage.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.DAL\\Storage\\PictureLekarstvaStorage.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.DAL\\Storage\\PictureLekarstvaStorage.cs",
+              "RelativeToolTip": "Travel\u0410gency.DAL\\Storage\\PictureLekarstvaStorage.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:17:07.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ZakazDb.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\ModelsDb\\ZakazDb.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Domain\\ModelsDb\\ZakazDb.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\ModelsDb\\ZakazDb.cs",
+              "RelativeToolTip": "Travel\u0410gency.Domain\\ModelsDb\\ZakazDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:16:04.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "PictureLekarstvaDb.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\ModelsDb\\PictureLekarstvaDb.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Domain\\ModelsDb\\PictureLekarstvaDb.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\ModelsDb\\PictureLekarstvaDb.cs",
+              "RelativeToolTip": "Travel\u0410gency.Domain\\ModelsDb\\PictureLekarstvaDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:15:48.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Zakaz.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\Models\\Zakaz.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Domain\\Models\\Zakaz.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\Models\\Zakaz.cs",
+              "RelativeToolTip": "Travel\u0410gency.Domain\\Models\\Zakaz.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:15:04.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "PictureLekarstva.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\Models\\PictureLekarstva.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Domain\\Models\\PictureLekarstva.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\Models\\PictureLekarstva.cs",
+              "RelativeToolTip": "Travel\u0410gency.Domain\\Models\\PictureLekarstva.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:14:51.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Lekarstva.cs",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\Models\\Lekarstva.cs",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Domain\\Models\\Lekarstva.cs",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\Models\\Lekarstva.cs",
+              "RelativeToolTip": "Travel\u0410gency.Domain\\Models\\Lekarstva.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T21:14:09.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Travel\u0410gency.Domain.csproj",
+              "DocumentMoniker": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj",
+              "RelativeDocumentMoniker": "Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj",
+              "ToolTip": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\Travel\u0410gency\\Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj",
+              "RelativeToolTip": "Travel\u0410gency.Domain\\Travel\u0410gency.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-20T20:53:22.25Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

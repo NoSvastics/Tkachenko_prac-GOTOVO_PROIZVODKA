@@ -1,0 +1,220 @@
+﻿@model TravelАgency.Domain.ViewModels.Lekarstva.ListOfLekarstvaViewModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Каталог лекарств";
+}
+
+<div class="container" style="padding: 40px 20px;">
+    <div class="page-header" style="margin-bottom: 30px;">
+        <h2 class="section-title" style="text-align: left; margin-bottom: 10px;">💊 Каталог лекарств</h2>
+        <p style="color: var(--gray);">Все необходимые препараты в одном месте</p>
+    </div>
+
+    <div class="catalog-layout">
+        <aside class="filters-panel">
+            <div class="filter-box">
+                <h4>🔍 Поиск</h4>
+                <input type="text" id="filter-name" placeholder="Название препарата..." class="filter-input">
+            </div>
+
+            <div class="filter-box">
+                <h4>Категории</h4>
+                <ul class="filter-list" id="category-filters">
+                    <li><label><input type="checkbox" value="Tablets"> Таблетки</label></li>
+                    <li><label><input type="checkbox" value="Syrups"> Сиропы</label></li>
+                    <li><label><input type="checkbox" value="Ointments"> Мази и гели</label></li>
+                    <li><label><input type="checkbox" value="Vitamins"> Витамины</label></li>
+                    <li><label><input type="checkbox" value="Antibiotics"> Антибиотики</label></li>
+                </ul>
+            </div>
+
+            <div class="filter-box">
+                <h4>Цена (₽)</h4>
+                <div style="display: flex; gap: 10px;">
+                    <input type="number" id="price-min" placeholder="От" class="filter-input-sm">
+                    <input type="number" id="price-max" placeholder="До" class="filter-input-sm">
+                </div>
+            </div>
+
+            <button class="btn btn-primary" onclick="applyFilters()" style="width: 100%; margin-top: 10px;">Применить</button>
+        </aside>
+
+        <div class="products-grid" id="products-container">
+            @if (Model.LekarstvaList != null && Model.LekarstvaList.Any())
+            {
+                @foreach (var item in Model.LekarstvaList)
+                {
+                    <div class="card">
+                        <div class="card-img">
+                            @if (!string.IsNullOrEmpty(item.PathImg))
+                            {
+                                <img src="@item.PathImg" alt="@item.Name" style="width:100%; height:100%; object-fit:cover;">
+                            }
+                            else
+                            {
+                                <span>Нет фото</span>
+                            }
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Name</h5>
+                            <p class="card-text">@item.Manufacturer</p>
+                            <div class="card-footer">
+                                <span class="price">@item.Price.ToString("C0")</span>
+                                <div style="display:flex; gap:8px; align-items:center;">
+                                    <a class="btn btn-outline" href="/Medicines/Details?id=@item.Id" style="padding:6px 12px;">Подробнее</a>
+                                    <button class="btn btn-primary" style="padding: 8px 15px;" onclick="addToCart('@item.Id')">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>Лекарства не найдены.</p>
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    .catalog-layout {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        gap: 30px;
+    }
+
+    .filters-panel {
+        background: white;
+        padding: 20px;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        height: fit-content;
+    }
+
+    .filter-box {
+        margin-bottom: 20px;
+    }
+
+        .filter-box h4 {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+    .filter-input, .filter-input-sm {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+    }
+
+    .filter-list li {
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+    }
+
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    .card-img {
+        height: 180px;
+        background: #f1f5f9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 8px 8px 0 0;
+    }
+
+    @@media (max-width: 768px) {
+        .catalog-layout {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<script>
+    async function addToCart(id) {
+        try {
+            const resp = await fetch('/Orders/Create', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id: id })
+            });
+
+            if (resp.status === 401) {
+                // неавторизован — перенаправляем на страницу входа/информации
+                alert('Требуется вход в аккаунт');
+                window.location.href = '/';
+                return;
+            }
+
+            if (resp.ok) {
+                alert('Добавлено в корзину');
+            } else {
+                const text = await resp.text();
+                alert('Ошибка: ' + text);
+            }
+        } catch (err) {
+            console.error(err);
+            alert('Ошибка при добавлении в корзину');
+        }
+    }
+
+    function applyFilters() {
+        const min = document.getElementById('price-min').value;
+        const max = document.getElementById('price-max').value;
+
+        const categories = [];
+        document.querySelectorAll('#category-filters input:checked').forEach(cb => {
+            categories.push(cb.value);
+        });
+
+        const filterData = {
+            PriceMin: min ? parseFloat(min) : 0,
+            PriceMax: max ? parseFloat(max) : 0,
+            Categories: categories
+        };
+
+        fetch('/Medicines/Filter', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(filterData)
+        })
+        .then(res => res.json())
+        .then(data => {
+            const container = document.getElementById('products-container');
+            container.innerHTML = '';
+
+            if(data.length === 0) {
+                container.innerHTML = '<p>Ничего не найдено</p>';
+                return;
+            }
+
+            data.forEach(item => {
+                const html = `
+                    <div class="card">
+                        <div class="card-img">
+                            ${item.pathImg ? `<img src="${item.pathImg}" style="width:100%; height:100%; object-fit:cover;">` : '<span>Нет фото</span>'}
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">${item.name}</h5>
+                            <p class="card-text">${item.manufacturer}</p>
+                            <div class="card-footer">
+                                <span class="price">${item.price} ₽</span>
+                                <div style="display:flex; gap:8px; align-items:center;">
+                                    <a class="btn btn-outline" href="/Medicines/Details?id=${item.id}" style="padding:6px 12px;">Подробнее</a>
+                                    <button class="btn btn-primary" style="padding: 8px 15px;" onclick="addToCart('${item.id}')">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += html;
+            });
+        });
+    }
+</script>

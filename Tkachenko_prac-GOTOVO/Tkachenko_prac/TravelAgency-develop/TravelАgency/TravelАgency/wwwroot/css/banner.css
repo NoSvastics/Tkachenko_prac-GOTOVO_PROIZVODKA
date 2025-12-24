@@ -1,0 +1,134 @@
+﻿/* banner.css - BANNER */
+
+.header-banner {
+    position: relative;
+    margin-top: 70px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img-header {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(26, 115, 232, 0.92);
+    padding: 50px 60px;
+    border-radius: 16px;
+    backdrop-filter: blur(15px);
+    z-index: 10;
+    animation: slideInUp 0.8s ease;
+    max-width: 600px;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.banner-overlay h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    line-height: 1.2;
+}
+
+.banner-overlay p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.banner-button {
+    background: white;
+    color: #1a73e8;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+    .banner-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        background: #f8f9fa;
+    }
+
+    .banner-button:active {
+        transform: translateY(-1px);
+    }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .header-banner {
+        height: 350px;
+    }
+
+    .banner-overlay {
+        padding: 30px 25px;
+        width: 90%;
+    }
+
+        .banner-overlay h1 {
+            font-size: 2rem;
+        }
+
+        .banner-overlay p {
+            font-size: 1rem;
+        }
+}
+
+@media (max-width: 768px) {
+    .header-banner {
+        height: 300px;
+    }
+
+    .banner-overlay {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+        .banner-overlay h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .banner-overlay p {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+    .banner-button {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
