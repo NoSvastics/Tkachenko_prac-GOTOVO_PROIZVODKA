@@ -1,0 +1,276 @@
+﻿<div class="container-login-registration" id="authModal">
+    <div class="block-container">
+        <div class="block">
+            <div class="block-item">
+                <h2>Уже есть аккаунт?</h2>
+                <button class="block-item_btn signin-btn" type="button">Войти</button>
+            </div>
+            <div class="block-item">
+                <h2>Нет аккаунта?</h2>
+                <button class="block-item_btn signup-btn" type="button">Создать</button>
+            </div>
+        </div>
+
+        <div class="form-box" id="authFormBox">
+            <div class="mobile-tabs">
+                <button class="tab-btn active" id="tab-signin" type="button">Вход</button>
+                <button class="tab-btn" id="tab-signup" type="button">Регистрация</button>
+            </div>
+
+            <!-- добавлены кнопки прокрутки -->
+            <div class="auth-scroll-buttons" style="position:absolute; right:18px; top:60px; display:flex; flex-direction:column; gap:8px; z-index:1001;">
+                <button type="button" id="scrollUpBtn" class="btn btn-outline" title="Прокрутить вверх" style="padding:6px 8px;">↑</button>
+                <button type="button" id="scrollDownBtn" class="btn btn-outline" title="Прокрутить вниз" style="padding:6px 8px;">↓</button>
+            </div>
+
+            <!-- ФОРМА ВХОДА -->
+            <form class="form form_signin" action="/Account/Login" method="post">
+                <h3>Вход в систему</h3>
+                <input type="email" name="Email" placeholder="Email" required />
+                <input type="password" name="Password" placeholder="Пароль" required />
+                <button type="submit" class="form-btn">Войти</button>
+                <div class="divider">или</div>
+                <a href="/Account/GoogleLogin" class="google-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                    Войти через Google
+                </a>
+            </form>
+
+            <!-- ФОРМА РЕГИСТРАЦИИ -->
+            <form class="form form_signup" id="registerForm">
+                <h3>Регистрация</h3>
+                <input type="text" id="username" name="Username" placeholder="Имя пользователя" required />
+                <input type="email" id="email" name="Email" placeholder="Email" required />
+                <input type="password" id="password" name="Password" placeholder="Пароль (минимум 6 символов)" required />
+                <input type="password" id="confirmPassword" name="ConfirmPassword" placeholder="Повторите пароль" required />
+
+                <div style="margin:10px 0; display:flex; gap:10px; align-items:center;">
+                    <label style="display:flex; align-items:center; gap:6px;"><input type="radio" name="Role" value="User" checked /> Пользователь</label>
+                    <label style="display:flex; align-items:center; gap:6px;"><input type="radio" name="Role" value="Admin" /> Админ</label>
+                </div>
+
+                <div id="adminCodeBlock" style="display:none; margin-bottom:10px;">
+                    <input type="text" id="adminCode" name="AdminCode" placeholder="Код администратора" />
+                </div>
+
+                <button type="submit" class="form-btn">Создать аккаунт</button>
+                <div class="divider">или</div>
+                <a href="/Account/GoogleLogin" class="google-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                    Зарегистрироваться через Google
+                </a>
+            </form>
+        </div>
+    </div>
+
+    @* Рендерим существующую частичную view с правильной разметкой и стилями *@
+    @await Html.PartialAsync("_ConfirmEmailPartial")
+</div>
+
+<script>
+    // helper: включить/выключить блокирующий оверлей модалки (блокируем фон, а не confirm-container)
+    function setModalBlocking(block) {
+        const auth = document.getElementById('authModal');
+        if (!auth) return;
+        const mainArea = auth.querySelector('.block-container') || auth.querySelector('.form-box') || auth;
+        if (block) {
+            mainArea.style.opacity = '0.5';
+            mainArea.style.pointerEvents = 'none';
+        } else {
+            mainArea.style.opacity = '1';
+            mainArea.style.pointerEvents = 'auto';
+        }
+    }
+
+    async function fetchWithTimeout(url, options = {}, timeoutMs = 10000) {
+        const controller = new AbortController();
+        const id = setTimeout(() => controller.abort(), timeoutMs);
+        options.signal = controller.signal;
+        try {
+            const res = await fetch(url, options);
+            clearTimeout(id);
+            return res;
+        } catch (err) {
+            clearTimeout(id);
+            throw err;
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const roleInputs = document.querySelectorAll('input[name="Role"]');
+        const adminBlock = document.getElementById('adminCodeBlock');
+        roleInputs.forEach(r => r.addEventListener('change', function () {
+            if (this.value === 'Admin') adminBlock.style.display = 'block'; else adminBlock.style.display = 'none';
+        }));
+
+        // Регистрация
+        document.getElementById('registerForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const role = formData.get('Role') || 'User';
+            const data = {
+                Login: formData.get('Username'),
+                Email: formData.get('Email'),
+                Password: formData.get('Password'),
+                ConfirmPassword: formData.get('ConfirmPassword'),
+                Role: role,
+                AdminCode: formData.get('AdminCode')
+            };
+
+            try {
+                const response = await fetchWithTimeout('/Account/Register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                }, 15000);
+
+                if (response.ok) {
+                    const result = await response.json();
+                    window.confirmationCode = result.code || result.data;
+                    window.userEmail = data.Email;
+
+                    // Работа с partial: .confirm-email-container и input с id="code_confirm"
+                    const confirmContainer = document.querySelector('.confirm-email-container');
+                    if (confirmContainer) {
+                        // показать модалку (в partial стили отображения предусмотрены)
+                        confirmContainer.style.display = 'flex';
+                        confirmContainer.style.zIndex = '10000';
+                        confirmContainer.style.pointerEvents = 'auto';
+                        // вставим email в partial, если там есть span для него
+                        const emailSpan = confirmContainer.querySelector('#confirmEmail') || document.getElementById('confirmEmail');
+                        if (emailSpan) emailSpan.textContent = window.userEmail;
+                    } else {
+                        // fallback на старую разметку
+                        const fallback = document.getElementById('confirmEmailModal');
+                        if (fallback) {
+                            fallback.style.display = 'flex';
+                            fallback.style.zIndex = '10000';
+                            fallback.style.pointerEvents = 'auto';
+                            const span = document.getElementById('confirmEmail');
+                            if (span) span.textContent = window.userEmail;
+                        }
+                    }
+
+                    setModalBlocking(true);
+                } else {
+                    const errorText = await response.text();
+                    alert('Ошибка: ' + errorText);
+                }
+            } catch (error) {
+                if (error.name === 'AbortError') {
+                    alert('Запрос на регистрацию превысил время ожидания. Попробуйте позже.');
+                } else {
+                    alert('Ошибка при регистрации: ' + (error.message || error));
+                }
+            } finally {
+                const modal = document.querySelector('.confirm-email-container') || document.getElementById('confirmEmailModal');
+                if (!modal || modal.style.display === 'none') setModalBlocking(false);
+            }
+        });
+
+        // Привязка кнопок partial (если partial содержит кнопки с классами send_confirm / button_confirm_close)
+        document.addEventListener('click', function (e) {
+            if (e.target && e.target.matches('.send_confirm')) {
+                // берём значение из input id="code_confirm" (partial)
+                const code = document.getElementById('code_confirm') ? document.getElementById('code_confirm').value : document.getElementById('codeConfirm')?.value;
+                if (!code) { alert('Введите код подтверждения'); return; }
+
+                const role = document.querySelector('input[name="Role"]:checked')?.value || 'User';
+                const adminCode = document.getElementById('adminCode')?.value;
+
+                const payload = {
+                    Login: document.getElementById('username').value,
+                    Email: window.userEmail,
+                    Password: document.getElementById('password').value,
+                    GeneratedCode: window.confirmationCode,
+                    CodeConfirm: code,
+                    Role: role,
+                    AdminCode: adminCode
+                };
+
+                fetch('/Account/ConfirmEmail', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                }).then(r => {
+                    if (r.ok) { alert('Регистрация успешна'); location.reload(); }
+                    else r.text().then(t => alert('Ошибка: ' + t));
+                }).catch(err => alert('Ошибка: ' + (err.message || err)));
+            }
+            if (e.target && e.target.matches('.button_confirm_close')) {
+                closeConfirmModal();
+            }
+        });
+
+        // ===== кнопки прокрутки =====
+        const formBox = document.getElementById('authFormBox');
+        const scrollUpBtn = document.getElementById('scrollUpBtn');
+        const scrollDownBtn = document.getElementById('scrollDownBtn');
+
+        function scrollByAmount(amount) {
+            if (!formBox) return;
+            // плавная прокрутка внутри formBox
+            formBox.scrollBy({ top: amount, behavior: 'smooth' });
+        }
+
+        if (scrollUpBtn) scrollUpBtn.addEventListener('click', () => scrollByAmount(-200));
+        if (scrollDownBtn) scrollDownBtn.addEventListener('click', () => scrollByAmount(200));
+
+    });
+
+    async function submitConfirmCode(code) {
+        const codeValue = typeof code === 'string' ? code : (document.getElementById('code_confirm')?.value || document.getElementById('codeConfirm')?.value);
+        if (!codeValue) { alert('Введите код подтверждения'); return; }
+
+        try {
+            const role = document.querySelector('input[name="Role"]:checked')?.value || 'User';
+            const adminCode = document.getElementById('adminCode')?.value;
+
+            const response = await fetchWithTimeout('/Account/ConfirmEmail', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    Login: document.getElementById('username').value,
+                    Email: window.userEmail,
+                    Password: document.getElementById('password').value,
+                    GeneratedCode: window.confirmationCode,
+                    CodeConfirm: codeValue,
+                    Role: role,
+                    AdminCode: adminCode
+                })
+            }, 15000);
+
+            if (response.ok) {
+                alert('Регистрация успешна!');
+                closeConfirmModal();
+                location.reload();
+            } else {
+                const err = await response.text();
+                alert('Ошибка подтверждения: ' + err);
+            }
+        } catch (error) {
+            if (error.name === 'AbortError') {
+                alert('Запрос подтверждения превысил время ожидания. Попробуйте ещё раз.');
+            } else {
+                alert('Ошибка: ' + (error.message || error));
+            }
+        } finally {
+            const modal = document.querySelector('.confirm-email-container') || document.getElementById('confirmEmailModal');
+            if (!modal || modal.style.display === 'none') setModalBlocking(false);
+        }
+    }
+
+    function closeConfirmModal() {
+        const confirmContainer = document.querySelector('.confirm-email-container') || document.getElementById('confirmEmailModal');
+        if (confirmContainer) {
+            confirmContainer.style.display = 'none';
+            confirmContainer.style.zIndex = '';
+            confirmContainer.style.pointerEvents = '';
+        }
+        setModalBlocking(false);
+    }
+</script>

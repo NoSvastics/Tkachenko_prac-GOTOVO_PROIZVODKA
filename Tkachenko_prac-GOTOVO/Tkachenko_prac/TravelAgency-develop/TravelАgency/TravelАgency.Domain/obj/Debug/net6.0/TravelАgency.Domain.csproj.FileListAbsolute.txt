@@ -24,3 +24,16 @@ C:\Users\WeirdToday\Desktop\Tkachenko_prac-GOTOVO\Tkachenko_prac\TravelAgency-de
 C:\Users\WeirdToday\Desktop\Tkachenko_prac-GOTOVO\Tkachenko_prac\TravelAgency-develop\TravelАgency\TravelАgency.Domain\obj\Debug\net6.0\refint\TravelАgency.Domain.dll
 C:\Users\WeirdToday\Desktop\Tkachenko_prac-GOTOVO\Tkachenko_prac\TravelAgency-develop\TravelАgency\TravelАgency.Domain\obj\Debug\net6.0\TravelАgency.Domain.pdb
 C:\Users\WeirdToday\Desktop\Tkachenko_prac-GOTOVO\Tkachenko_prac\TravelAgency-develop\TravelАgency\TravelАgency.Domain\obj\Debug\net6.0\ref\TravelАgency.Domain.dll
+C:\Users\mrban\Desktop\Tkachenko_prac-GOTOVO_PROIZVODKA\Tkachenko_prac-GOTOVO\Tkachenko_prac\TravelAgency-develop\TravelАgency\TravelАgency.Domain\bin\Debug\net6.0\TravelАgency.Domain.deps.json
+C:\Users\mrban\Desktop\Tkachenko_prac-GOTOVO_PROIZVODKA\Tkachenko_prac-GOTOVO\Tkachenko_prac\TravelAgency-develop\TravelАgency\TravelАgency.Domain\bin\Debug\net6.0\TravelАgency.Domain.dll
+C:\Users\mrban\Desktop\Tkachenko_prac-GOTOVO_PROIZVODKA\Tkachenko_prac-GOTOVO\Tkachenko_prac\TravelAgency-develop\TravelАgency\TravelАgency.Domain\bin\Debug\net6.0\TravelАgency.Domain.pdb
+C:\Users\mrban\Desktop\Tkachenko_prac-GOTOVO_PROIZVODKA\Tkachenko_prac-GOTOVO\Tkachenko_prac\TravelAgency-develop\TravelАgency\TravelАgency.Domain\obj\Debug\net6.0\TravelАgency.Domain.csproj.AssemblyReference.cache
+C:\Users\mrban\Desktop\Tkachenko_prac-GOTOVO_PROIZVODKA\Tkachenko_prac-GOTOVO\Tkachenko_prac\TravelAgency-develop\TravelАgency\TravelАgency.Domain\obj\Debug\net6.0\TravelАgency.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mrban\Desktop\Tkachenko_prac-GOTOVO_PROIZVODKA\Tkachenko_prac-GOTOVO\Tkachenko_prac\TravelAgency-develop\TravelАgency\TravelАgency.Domain\obj\Debug\net6.0\TravelАgency.Domain.AssemblyInfoInputs.cache
+C:\Users\mrban\Desktop\Tkachenko_prac-GOTOVO_PROIZVODKA\Tkachenko_prac-GOTOVO\Tkachenko_prac\TravelAgency-develop\TravelАgency\TravelАgency.Domain\obj\Debug\net6.0\TravelАgency.Domain.AssemblyInfo.cs
+C:\Users\mrban\Desktop\Tkachenko_prac-GOTOVO_PROIZVODKA\Tkachenko_prac-GOTOVO\Tkachenko_prac\TravelAgency-develop\TravelАgency\TravelАgency.Domain\obj\Debug\net6.0\TravelАgency.Domain.csproj.CoreCompileInputs.cache
+C:\Users\mrban\Desktop\Tkachenko_prac-GOTOVO_PROIZVODKA\Tkachenko_prac-GOTOVO\Tkachenko_prac\TravelAgency-develop\TravelАgency\TravelАgency.Domain\obj\Debug\net6.0\TravelАgency.Domain.sourcelink.json
+C:\Users\mrban\Desktop\Tkachenko_prac-GOTOVO_PROIZVODKA\Tkachenko_prac-GOTOVO\Tkachenko_prac\TravelAgency-develop\TravelАgency\TravelАgency.Domain\obj\Debug\net6.0\TravelАgency.Domain.dll
+C:\Users\mrban\Desktop\Tkachenko_prac-GOTOVO_PROIZVODKA\Tkachenko_prac-GOTOVO\Tkachenko_prac\TravelAgency-develop\TravelАgency\TravelАgency.Domain\obj\Debug\net6.0\refint\TravelАgency.Domain.dll
+C:\Users\mrban\Desktop\Tkachenko_prac-GOTOVO_PROIZVODKA\Tkachenko_prac-GOTOVO\Tkachenko_prac\TravelAgency-develop\TravelАgency\TravelАgency.Domain\obj\Debug\net6.0\TravelАgency.Domain.pdb
+C:\Users\mrban\Desktop\Tkachenko_prac-GOTOVO_PROIZVODKA\Tkachenko_prac-GOTOVO\Tkachenko_prac\TravelAgency-develop\TravelАgency\TravelАgency.Domain\obj\Debug\net6.0\ref\TravelАgency.Domain.dll

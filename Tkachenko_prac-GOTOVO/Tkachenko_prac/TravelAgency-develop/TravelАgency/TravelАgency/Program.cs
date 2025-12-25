@@ -4,11 +4,21 @@ using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.EntityFrameworkCore;
 using Travel¿gency;
 using Travel¿gency.DAL;
+using AutoMapper;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddJsonOptions(opts =>
+{
+    // Allow enum values to be provided as strings in JSON
+    opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    opts.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+});
+
+// Register AutoMapper profiles so IMapper is available via DI
+builder.Services.AddAutoMapper(typeof(Travel¿gency.Service.AppMappingProfile));
 
 string connection = builder.Configuration.GetConnectionString("DefaultConnection");
 

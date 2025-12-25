@@ -12,7 +12,7 @@ using TravelАgency.DAL;
 namespace TravelАgency.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251124094825_Init")]
+    [Migration("20251224225513_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
