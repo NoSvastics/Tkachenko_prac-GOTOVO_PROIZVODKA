@@ -23,6 +23,8 @@ wwwroot\images\lekarstva\vit232323_c.jpg
 wwwroot\images\lekarstva\vitadd2dwf34_c.jpg
 wwwroot\images\lekarstva\vitsdad23_c.jpg
 wwwroot\images\lekarstva\vsef34fit_c.jpg
+wwwroot\ImageUser\f64d5dd8-f95a-4a95-8ec6-ccc8cfde0b43.jpg
+wwwroot\ImageUser\f64d5dd8-f95a-4a95-8ec6-ccc8cfde0b43.png
 wwwroot\ImageUser\sergenator2000@gmail.com-avatar.jpg
 wwwroot\js\home_script.js
 wwwroot\js\login_and_registration_script.js

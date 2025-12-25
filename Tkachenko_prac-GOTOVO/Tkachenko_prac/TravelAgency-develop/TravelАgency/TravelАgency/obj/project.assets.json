@@ -1277,23 +1277,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mrban\\.nuget\\packages\\": {},
-    "D:\\naf\\NuGetPackages": {}
+    "C:\\Users\\WeirdToday\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mrban\\Desktop\\Tkachenko_prac-GOTOVO_PROIZVODKA\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\TravelАgency\\TravelАgency\\TravelАgency.csproj",
+      "projectUniqueName": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO_PROIZVODKA\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\TravelАgency\\TravelАgency\\TravelАgency.csproj",
       "projectName": "TravelАgency",
-      "projectPath": "C:\\Users\\mrban\\Desktop\\Tkachenko_prac-GOTOVO_PROIZVODKA\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\TravelАgency\\TravelАgency\\TravelАgency.csproj",
-      "packagesPath": "C:\\Users\\mrban\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mrban\\Desktop\\Tkachenko_prac-GOTOVO_PROIZVODKA\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\TravelАgency\\TravelАgency\\obj\\",
+      "projectPath": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO_PROIZVODKA\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\TravelАgency\\TravelАgency\\TravelАgency.csproj",
+      "packagesPath": "C:\\Users\\WeirdToday\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO_PROIZVODKA\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\TravelАgency\\TravelАgency\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\naf\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\mrban\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\WeirdToday\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1309,14 +1309,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\mrban\\Desktop\\Tkachenko_prac-GOTOVO_PROIZVODKA\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\TravelАgency\\TravelАgency.DAL\\TravelАgency.DAL.csproj": {
-              "projectPath": "C:\\Users\\mrban\\Desktop\\Tkachenko_prac-GOTOVO_PROIZVODKA\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\TravelАgency\\TravelАgency.DAL\\TravelАgency.DAL.csproj"
+            "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO_PROIZVODKA\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\TravelАgency\\TravelАgency.DAL\\TravelАgency.DAL.csproj": {
+              "projectPath": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO_PROIZVODKA\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\TravelАgency\\TravelАgency.DAL\\TravelАgency.DAL.csproj"
             },
-            "C:\\Users\\mrban\\Desktop\\Tkachenko_prac-GOTOVO_PROIZVODKA\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\TravelАgency\\TravelАgency.Domain\\TravelАgency.Domain.csproj": {
-              "projectPath": "C:\\Users\\mrban\\Desktop\\Tkachenko_prac-GOTOVO_PROIZVODKA\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\TravelАgency\\TravelАgency.Domain\\TravelАgency.Domain.csproj"
+            "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO_PROIZVODKA\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\TravelАgency\\TravelАgency.Domain\\TravelАgency.Domain.csproj": {
+              "projectPath": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO_PROIZVODKA\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\TravelАgency\\TravelАgency.Domain\\TravelАgency.Domain.csproj"
             },
-            "C:\\Users\\mrban\\Desktop\\Tkachenko_prac-GOTOVO_PROIZVODKA\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\TravelАgency\\TravelАgency.Service\\TravelАgency.Service.csproj": {
-              "projectPath": "C:\\Users\\mrban\\Desktop\\Tkachenko_prac-GOTOVO_PROIZVODKA\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\TravelАgency\\TravelАgency.Service\\TravelАgency.Service.csproj"
+            "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO_PROIZVODKA\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\TravelАgency\\TravelАgency.Service\\TravelАgency.Service.csproj": {
+              "projectPath": "C:\\Users\\WeirdToday\\Desktop\\Tkachenko_prac-GOTOVO_PROIZVODKA\\Tkachenko_prac-GOTOVO\\Tkachenko_prac\\TravelAgency-develop\\TravelАgency\\TravelАgency.Service\\TravelАgency.Service.csproj"
             }
           }
         }
@@ -1367,7 +1367,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308\\RuntimeIdentifierGraph.json"
       }
     }
   }

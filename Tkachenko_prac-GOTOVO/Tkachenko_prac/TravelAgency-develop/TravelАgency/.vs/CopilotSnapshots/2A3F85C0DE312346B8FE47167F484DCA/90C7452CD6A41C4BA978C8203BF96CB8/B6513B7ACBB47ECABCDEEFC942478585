@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Аптека Медика</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/variables.css" />
+    <link rel="stylesheet" href="~/css/base_styles.css" />
+    <link rel="stylesheet" href="~/css/header.css" />
+    <link rel="stylesheet" href="~/css/footer.css" />
+    <link rel="stylesheet" href="~/css/login_and_registration.css" />
+    <link rel="stylesheet" href="~/css/cards.css" />
+</head>
+<body>
+
+    <div id="header-top">
+        <div class="container header-container">
+            <a href="/" class="logo">💊 Аптека Медика</a>
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/Medicines/Catalog">Лекарства</a></li>
+                    <li><a href="/#features">Функции</a></li>
+                    <li><a href="/#contact">Контакты</a></li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li><a href="/Orders/List">Заказы</a></li>
+                    }
+                </ul>
+            </nav>
+
+            <div class="button-header">
+                @if (!User.Identity.IsAuthenticated)
+                {
+                    <button class="btn btn-primary" onclick="openModal()">Войти</button>
+                }
+                else
+                {
+                    <div class="user-menu-wrapper">
+                        <button id="user-menu-btn" class="user-menu-btn">
+                            <span class="user-icon">👤</span>
+                        </button>
+                        <div id="user-dropdown" class="user-dropdown">
+                            <div class="user-dropdown-header">
+                                <span class="user-name">@User.Identity.Name</span>
+                            </div>
+                            <a href="/Account/Profile" class="user-dropdown-item">
+                                <span class="icon">👤</span>
+                                <span>Мой профиль</span>
+                            </a>
+                            <a href="/Orders/List" class="user-dropdown-item">
+                                <span class="icon">📋</span>
+                                <span>Заказы</span>
+                            </a>
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <a href="/Admin/Index" class="user-dropdown-item admin-item">
+                                    <span class="icon">⚙️</span>
+                                    <span>Админ-панель</span>
+                                </a>
+                            }
+                            <div class="user-dropdown-divider"></div>
+                            <a href="/Account/Logout" class="user-dropdown-item logout-item">
+                                <span class="icon">🚪</span>
+                                <span>Выход</span>
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <button id="hamburger" class="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+
+    <div id="side-menu" class="side-menu">
+        <a href="/">🏠 Главная</a>
+        <a href="/Medicines/Catalog">💊 Лекарства</a> <a href="/#features">⚙️ Функции</a>
+        <a href="/#contact">📞 Контакты</a>
+        @if (!User.Identity.IsAuthenticated)
+        {
+            <button class="btn btn-primary" onclick="openModal()" style="margin-top: 20px;">Войти</button>
+        }
+        else
+        {
+            <a href="/Account/Logout" class="btn btn-secondary" style="margin-top: 20px; display: block; text-align: center;">Выход</a>
+        }
+    </div>
+
+    @await Html.PartialAsync("_LoginRegistrationPartial")
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <div class="logo" style="margin-bottom: 15px;">💊 Аптека Медика</div>
+                <p>Современная система управления аптечным бизнесом.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/Medicines/Catalog">Каталог лекарств</a></li>
+                    <li><a href="/#features">О системе</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Контакты</h3>
+                <ul>
+                    <li>📍 г. Москва, ул. Ленина 1</li>
+                    <li>📞 +7 (999) 000-00-00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2024 Аптека Медика. Все права защищены.
+        </div>
+    </footer>
+
+    <script src="~/js/shared_script.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

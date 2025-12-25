@@ -1,0 +1,43 @@
+﻿@model TravelАgency.Domain.Models.User
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Мой профиль";
+}
+
+<div class="container" style="padding: 40px 20px;">
+    <div class="page-header" style="margin-bottom: 20px;">
+        <h2 class="section-title">Мой профиль</h2>
+        <p style="color: var(--gray);">Редактировать данные аккаунта</p>
+    </div>
+
+    <form method="post" action="/Account/UpdateProfile" class="profile-form">
+        <div class="form-row">
+            <label>Имя пользователя</label>
+            <input type="text" name="Login" value="@Model.Login" required />
+        </div>
+        <div class="form-row">
+            <label>Email</label>
+            <input type="email" name="Email" value="@Model.Email" required />
+        </div>
+        <div class="form-row">
+            <label>Новый пароль (оставьте пустым, если не меняете)</label>
+            <input type="password" name="Password" />
+        </div>
+        <div class="form-row">
+            <label>Старый пароль (требуется при смене пароля)</label>
+            <input type="password" name="oldPassword" />
+        </div>
+
+        <div style="margin-top:20px; display:flex; gap:10px;">
+            <button type="submit" class="btn btn-primary">Сохранить</button>
+            <a href="/" class="btn btn-secondary">Отмена</a>
+        </div>
+    </form>
+</div>
+
+<style>
+    .profile-form { max-width: 720px; }
+    .profile-form .form-row { margin-bottom: 15px; display:flex; flex-direction:column; }
+    .profile-form label { margin-bottom:6px; color:var(--text); font-weight:600; }
+    .profile-form input { padding: 12px 14px; border:1px solid var(--light); border-radius:8px; font-size:14px; }
+</style>

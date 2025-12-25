@@ -1,0 +1,92 @@
+@model List<TravelАgency.Domain.Models.Lekarstva>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Управление лекарствами";
+}
+
+<div class="container" style="padding: 40px 20px;">
+    <div class="page-header" style="margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h2 class="section-title" style="text-align: left; margin-bottom: 10px;">Управление лекарствами</h2>
+            <p style="color: var(--gray);">Добавляйте, редактируйте и удаляйте лекарства из базы данных</p>
+        </div>
+        <a href="/Admin/CreateMedicine" class="btn btn-primary" style="padding: 10px 20px;">+ Добавить лекарство</a>
+    </div>
+
+    @if (Model != null && Model.Count > 0)
+    {
+        <div class="medicines-table" style="background: white; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md);">
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead style="background: #f8f9fa; border-bottom: 2px solid #e9ecef;">
+                    <tr>
+                        <th style="padding: 15px; text-align: left; font-weight: 600;">Название</th>
+                        <th style="padding: 15px; text-align: left; font-weight: 600;">Производитель</th>
+                        <th style="padding: 15px; text-align: left; font-weight: 600;">Категория</th>
+                        <th style="padding: 15px; text-align: right; font-weight: 600;">Цена</th>
+                        <th style="padding: 15px; text-align: center; font-weight: 600;">Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var medicine in Model)
+                    {
+                        <tr style="border-bottom: 1px solid #e9ecef; transition: 0.2s;">
+                            <td style="padding: 15px;">
+                                <strong>@medicine.Name</strong>
+                            </td>
+                            <td style="padding: 15px;">@medicine.Manufacturer</td>
+                            <td style="padding: 15px;">
+                                <span style="background: #e3f2fd; color: #1976d2; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem;">
+                                    @medicine.Category
+                                </span>
+                            </td>
+                            <td style="padding: 15px; text-align: right;">
+                                <strong style="color: var(--primary);">@medicine.Price.ToString("C0")</strong>
+                            </td>
+                            <td style="padding: 15px; text-align: center;">
+                                <a href="/Admin/EditMedicine?id=@medicine.Id" class="btn btn-outline" style="padding: 6px 12px; font-size: 0.85rem; text-decoration: none; display: inline-block;">
+                                    Редактировать
+                                </a>
+                                <form action="/Admin/DeleteMedicine" method="post" style="display: inline-block; margin-left: 5px;">
+                                    <input type="hidden" name="id" value="@medicine.Id" />
+                                    <button type="submit" class="btn" style="padding: 6px 12px; font-size: 0.85rem; background: #f44336; color: white; border: none; border-radius: 6px; cursor: pointer;" 
+                                            onclick="return confirm('Вы уверены?')">
+                                        Удалить
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div style="background: white; padding: 40px; text-align: center; border-radius: var(--radius); box-shadow: var(--shadow-sm);">
+            <p style="font-size: 1.2rem; color: var(--gray); margin-bottom: 20px;">?? Лекарства не найдены</p>
+            <a href="/Admin/CreateMedicine" class="btn btn-primary">+ Добавить первое лекарство</a>
+        </div>
+    }
+</div>
+
+<style>
+    .medicines-table tbody tr:hover {
+        background: #f8f9fa;
+    }
+
+    @@media (max-width: 768px) {
+        .medicines-table {
+            overflow-x: auto;
+        }
+
+        .page-header {
+            flex-direction: column;
+            align-items: flex-start !important;
+        }
+
+        .page-header a {
+            margin-top: 15px;
+            width: 100%;
+        }
+    }
+</style>

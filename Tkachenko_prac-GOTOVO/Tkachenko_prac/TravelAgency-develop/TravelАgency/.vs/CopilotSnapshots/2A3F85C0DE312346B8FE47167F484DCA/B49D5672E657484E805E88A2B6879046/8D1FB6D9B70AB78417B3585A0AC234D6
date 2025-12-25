@@ -1,0 +1,100 @@
+﻿@model TravelАgency.Domain.Models.User
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Мой профиль";
+}
+
+<div class="container" style="padding: 40px 20px;">
+    <div class="page-header" style="margin-bottom: 30px;">
+        <h2 class="section-title" style="text-align: left;">👤 Мой профиль</h2>
+        <p style="color: var(--gray);">Редактируйте ваши данные и загружайте аватарку</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px;">
+        <!-- Левая колонка: Форма -->
+        <form method="post" action="/Account/UpdateProfile" class="profile-form" enctype="multipart/form-data">
+            <div class="form-row">
+                <label for="login">Имя пользователя</label>
+                <input type="text" id="login" name="Login" value="@Model.Login" required />
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="Email" value="@Model.Email" required />
+            </div>
+
+            <div class="form-row">
+                <label for="password">Новый пароль (оставьте пустым, если не меняете)</label>
+                <input type="password" id="password" name="Password" />
+            </div>
+
+            <div class="form-row">
+                <label for="oldPassword">Старый пароль (требуется при смене пароля)</label>
+                <input type="password" id="oldPassword" name="oldPassword" />
+            </div>
+
+            <div style="margin-top:25px; display:flex; gap:10px;">
+                <button type="submit" class="btn btn-primary" style="flex: 1;">✓ Сохранить</button>
+                <a href="/" class="btn btn-secondary" style="flex: 1; text-align: center; text-decoration: none;">← Назад</a>
+            </div>
+        </form>
+
+        <!-- Правая колонка: Аватарка -->
+        <div class="profile-avatar-section" style="background: white; padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow-md); text-align: center;">
+            <h3 style="margin-bottom: 20px; font-weight: 600;">Ваша аватарка</h3>
+            
+            <div class="avatar-preview" style="width: 180px; height: 180px; margin: 0 auto 20px; border-radius: 50%; overflow: hidden; background: #f0f0f0; display: flex; align-items: center; justify-content: center; border: 3px solid var(--primary);">
+                @if (!string.IsNullOrEmpty(Model.PathImage) && Model.PathImage != " ")
+                {
+                    <img src="@Model.PathImage" alt="Аватарка" style="width: 100%; height: 100%; object-fit: cover;" />
+                }
+                else
+                {
+                    <span style="font-size: 3rem;">👤</span>
+                }
+            </div>
+
+            <form method="post" action="/Account/UploadAvatar" enctype="multipart/form-data" style="margin-bottom: 20px;">
+                <label for="avatarFile" style="display: block; margin-bottom: 12px; font-weight: 600;">Загрузить новую аватарку</label>
+                <input type="file" id="avatarFile" name="avatarFile" accept="image/*" required 
+                       style="display: block; width: 100%; padding: 10px; border: 2px dashed var(--primary); border-radius: 6px; cursor: pointer;" />
+                <small style="color: var(--gray); display: block; margin-top: 8px;">Поддерживаемые форматы: JPG, PNG, GIF (макс. 5МБ)</small>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 15px;">⬆️ Загрузить</button>
+            </form>
+
+            @if (!string.IsNullOrEmpty(Model.PathImage) && Model.PathImage != " ")
+            {
+                <form method="post" action="/Account/DeleteAvatar" style="display: inline;">
+                    <button type="submit" class="btn" style="background: #f44336; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; width: 100%;"
+                            onclick="return confirm('Удалить аватарку?')">
+                        🗑️ Удалить аватарку
+                    </button>
+                </form>
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    .profile-form { }
+    .profile-form .form-row { margin-bottom: 20px; display: flex; flex-direction: column; }
+    .profile-form label { margin-bottom: 8px; color: var(--dark); font-weight: 600; }
+    .profile-form input { 
+        padding: 12px 14px; 
+        border: 1px solid #e0e0e0; 
+        border-radius: 8px; 
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+    .profile-form input:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+        outline: none;
+    }
+
+    @media (max-width: 768px) {
+        div[style*="grid-template-columns: 1fr 1fr"] {
+            grid-template-columns: 1fr !important;
+        }
+    }
+</style>

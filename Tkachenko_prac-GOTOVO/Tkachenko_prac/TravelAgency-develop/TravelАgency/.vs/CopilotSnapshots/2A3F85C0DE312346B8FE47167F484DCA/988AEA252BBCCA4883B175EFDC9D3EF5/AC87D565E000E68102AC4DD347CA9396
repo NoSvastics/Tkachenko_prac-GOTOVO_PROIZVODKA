@@ -1,0 +1,14 @@
+﻿{
+
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=localhost;Port = 5432;Database = Apteka_Tkachenko;Username = postgres;Password = 123123"
+  },
+
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}

@@ -1,0 +1,73 @@
+@model TravelАgency.Domain.Models.Lekarstva
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Добавить лекарство";
+}
+
+<div class="container" style="padding: 40px 20px;">
+    <div style="max-width: 600px; margin: 0 auto;">
+        <div style="margin-bottom: 30px;">
+            <a href="/Admin/Medicines" style="color: var(--primary); text-decoration: none; font-weight: 500;">Назад к списку</a>
+            <h2 class="section-title" style="text-align: left; margin-bottom: 10px;">Добавить новое лекарство</h2>
+            <p style="color: var(--gray);">Заполните форму для добавления нового препарата в базу данных</p>
+        </div>
+
+        <form method="post" action="/Admin/CreateMedicine" style="background: white; padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow-md);">
+            <div style="margin-bottom: 20px;">
+                <label for="name" style="display: block; margin-bottom: 8px; font-weight: 600;">Название препарата *</label>
+                <input type="text" id="name" name="Name" class="form-input" placeholder="Например: Аспирин" required 
+                       style="width: 100%; padding: 10px 12px; border: 1px solid #e0e0e0; border-radius: 6px; font-size: 1rem;" />
+                @if (ViewData.ModelState.ContainsKey("Name"))
+                {
+                    <span style="color: #f44336; font-size: 0.85rem;">@ViewData.ModelState["Name"].Errors.FirstOrDefault()?.ErrorMessage</span>
+                }
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label for="manufacturer" style="display: block; margin-bottom: 8px; font-weight: 600;">Производитель *</label>
+                <input type="text" id="manufacturer" name="Manufacturer" class="form-input" placeholder="Название компании" required 
+                       style="width: 100%; padding: 10px 12px; border: 1px solid #e0e0e0; border-radius: 6px; font-size: 1rem;" />
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label for="description" style="display: block; margin-bottom: 8px; font-weight: 600;">Описание *</label>
+                <textarea id="description" name="Description" class="form-input" placeholder="Подробное описание препарата" required 
+                          style="width: 100%; padding: 10px 12px; border: 1px solid #e0e0e0; border-radius: 6px; font-size: 1rem; min-height: 100px; resize: vertical;"></textarea>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label for="price" style="display: block; margin-bottom: 8px; font-weight: 600;">Цена (?) *</label>
+                <input type="number" id="price" name="Price" class="form-input" placeholder="0.00" step="0.01" min="0" required 
+                       style="width: 100%; padding: 10px 12px; border: 1px solid #e0e0e0; border-radius: 6px; font-size: 1rem;" />
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label for="category" style="display: block; margin-bottom: 8px; font-weight: 600;">Категория *</label>
+                <select id="category" name="Category" class="form-input" required 
+                        style="width: 100%; padding: 10px 12px; border: 1px solid #e0e0e0; border-radius: 6px; font-size: 1rem;">
+                    <option value="">-- Выберите категорию --</option>
+                    <option value="0">Таблетки</option>
+                    <option value="1">Сиропы</option>
+                    <option value="2">Мази и гели</option>
+                    <option value="3">Витамины</option>
+                    <option value="4">Антибиотики</option>
+                </select>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label for="pathImg" style="display: block; margin-bottom: 8px; font-weight: 600;">Ссылка на изображение</label>
+                <input type="url" id="pathImg" name="PathImg" class="form-input" placeholder="https://..." 
+                       style="width: 100%; padding: 10px 12px; border: 1px solid #e0e0e0; border-radius: 6px; font-size: 1rem;" />
+            </div>
+
+            <div style="display: flex; gap: 10px; margin-top: 30px;">
+                <button type="submit" class="btn btn-primary" style="flex: 1; padding: 12px 20px; font-size: 1rem;">
+                    Добавить лекарство
+                </button>
+                <a href="/Admin/Medicines" class="btn btn-outline" style="flex: 1; padding: 12px 20px; font-size: 1rem; text-align: center; text-decoration: none;">
+                    Отмена
+                </a>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Админ-панель";
+}
+
+<div class="container" style="padding: 40px 20px;">
+    <div class="page-header" style="margin-bottom: 30px;">
+        <h2 class="section-title" style="text-align: left; margin-bottom: 10px;">⚙️ Админ-панель</h2>
+        <p style="color: var(--gray);">Управление системой и контентом</p>
+    </div>
+
+    <div class="admin-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        <div class="admin-card" style="background: white; padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow-md); text-align: center; cursor: pointer; transition: 0.3s;">
+            <div style="font-size: 3rem; margin-bottom: 15px;">💊</div>
+            <h3>Управление лекарствами</h3>
+            <p style="color: var(--gray); margin: 10px 0;">Добавить, редактировать и удалить лекарства</p>
+            <a href="#" class="btn btn-primary" style="display: inline-block; margin-top: 15px;">Перейти</a>
+        </div>
+
+        <div class="admin-card" style="background: white; padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow-md); text-align: center; cursor: pointer; transition: 0.3s;">
+            <div style="font-size: 3rem; margin-bottom: 15px;">📋</div>
+            <h3>Заказы</h3>
+            <p style="color: var(--gray); margin: 10px 0;">Просмотр и обработка заказов</p>
+            <a href="#" class="btn btn-primary" style="display: inline-block; margin-top: 15px;">Перейти</a>
+        </div>
+
+        <div class="admin-card" style="background: white; padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow-md); text-align: center; cursor: pointer; transition: 0.3s;">
+            <div style="font-size: 3rem; margin-bottom: 15px;">👥</div>
+            <h3>Пользователи</h3>
+            <p style="color: var(--gray); margin: 10px 0;">Управление учётными записями</p>
+            <a href="#" class="btn btn-primary" style="display: inline-block; margin-top: 15px;">Перейти</a>
+        </div>
+
+        <div class="admin-card" style="background: white; padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow-md); text-align: center; cursor: pointer; transition: 0.3s;">
+            <div style="font-size: 3rem; margin-bottom: 15px;">📊</div>
+            <h3>Статистика</h3>
+            <p style="color: var(--gray); margin: 10px 0;">Аналитика и отчёты</p>
+            <a href="#" class="btn btn-primary" style="display: inline-block; margin-top: 15px;">Перейти</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .admin-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    @@media (max-width: 768px) {
+        .admin-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

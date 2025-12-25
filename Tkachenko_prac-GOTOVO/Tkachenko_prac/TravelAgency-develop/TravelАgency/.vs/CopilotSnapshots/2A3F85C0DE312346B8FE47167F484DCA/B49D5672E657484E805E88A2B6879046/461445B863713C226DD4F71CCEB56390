@@ -1,0 +1,22 @@
+﻿using System.Security.Claims;
+using TravelАgency.Domain.Models;
+
+namespace TravelАgency.Service.HelpersService
+{
+    public static class AuthenticateUserHelper
+    {
+        public static ClaimsIdentity Authenticate(User user)
+        {
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Email, user.Email ?? string.Empty),
+                new Claim(ClaimTypes.Name, user.Login ?? string.Empty),
+                new Claim(ClaimsIdentity.DefaultRoleClaimType, user.Role.ToString()),
+                new Claim("AvatarPath", user.PathImage ?? string.Empty),
+            };
+            return new ClaimsIdentity(claims, "ApplicationCookie",
+                ClaimTypes.Email, ClaimsIdentity.DefaultRoleClaimType);
+        }
+    }
+}
